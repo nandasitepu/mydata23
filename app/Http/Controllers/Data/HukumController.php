@@ -49,9 +49,8 @@ class HukumController extends Controller
      */
     public function index()
     {
-        $hukum = Hukum::all();
-        $data = ['data' => $hukum];
-        return $data;
+        $hukum = Hukum::where('jenis', 'uu')->paginate(5);
+        return view ('data.hukum.index', compact('hukum'));
     }
 
     // SITESs

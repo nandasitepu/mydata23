@@ -8,9 +8,8 @@
                 <div class="card">
                     <div class="card-body">
                         <form action="{{route('artikel.store')}}">
-
                             <div class="mb-3">
-                                <label for="judul" class="form-label fw-bold">Judul Berita/label>
+                                <label for="judul" class="form-label fw-bold">Judul Berita</label>
                                 <input type="text" class="form-control" id="judul" aria-describedby="emailHelp">
                                 <div id="judul-help" class="form-text fst-italic">Buat judul yang bagus</div>
                             </div>

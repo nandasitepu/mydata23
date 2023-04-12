@@ -40,7 +40,7 @@
                             <i class="bi bi-list bi-lg "></i>
                         </div>
                         <div class="page-header float-start">
-                            <h5>DB</h5>
+                            <h5>DashxBoard</h5>
                         </div>
                         <br>
                         <hr>

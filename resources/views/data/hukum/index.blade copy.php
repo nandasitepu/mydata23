@@ -5,14 +5,12 @@
         <div class="card">
             <div class="card-header">Data Hukum</div>
             <div class="card-body">
-                @foreach ($hukum as $hkm)
-                  <ul> <li>{{ $hkm->nomor}}</li></ul>
-                @endforeach
+                {{ $dataTable->table() }}
             </div>
         </div>
     </div>
-
-    {!! $hukum->links() !!}
 @endsection
 
-
+@push('scripts')
+    {{ $dataTable->scripts(attributes: ['type' => 'module']) }}
+@endpush

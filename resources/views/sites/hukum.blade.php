@@ -3,17 +3,15 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-4">
-
-            </div>
-            <div class="col-4 mb-3">
-                <div class="card text-center">
+            <div class="col-3">
+                <div class="card text-center p-1">
                     <b>Data Hukum <i class="bi bi-bank2" aria-hidden="true"></i></b>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-9">
                 <div class="input-group float-center">
-                    <input type="text" class="form-control" placeholder="Cari Disini ..." aria-label="search-form"
+                    <input type="text" class="form-control form-control-sm"
+                        placeholder=" Nomor   /   Uraian   /   Jenis   /   ..." aria-label="search-form"
                         aria-describedby="basic-addon2">
                     <span class="input-group-text" id="basic-addon2">
                         <i class="bi bi-search" aria-hidden="true"></i>
@@ -23,7 +21,8 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3">
+                {{-- PUSAT  --}}
                 <div class="card">
                     <div class="bg-dark text-white fw-bold p-1">Peraturan Pusat</div>
                     <ol class="list-group list-group-numbered">
@@ -49,8 +48,7 @@
                     </ol>
 
                 </div>
-            </div>
-            <div class="col-md-6">
+                {{-- Daerah  --}}
                 <div class="card">
                     <div class="bg-dark text-white fw-bold p-1">Peraturan Daerah</div>
                     <ol class="list-group list-group-numbered">
@@ -76,10 +74,7 @@
                         </li>
                     </ol>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mt-2">
+                {{-- KLPND --}}
                 <div class="card">
                     <div class="bg-dark text-white fw-bold p-1">Peraturan Kementerian / LPND</div>
                     <ol class="list-group list-group-numbered">
@@ -106,7 +101,17 @@
 
                 </div>
             </div>
+            <div class="col-md-9">
+                <div class="card ">
+                    <div class="card-body radius-0">
+                        @foreach ($data as $h )
+                            $h->nomor
+                        @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 @endsection
 
