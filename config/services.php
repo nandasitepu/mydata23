@@ -33,6 +33,6 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://mydata.id/login/google/callback',
+        'redirect' => 'https://mydata.id/login/google/callback',
     ],
 ];
