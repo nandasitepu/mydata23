@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome')->name('welcome');
+Route::view('/hukum', 'pages.hukum')->name('hukum');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
