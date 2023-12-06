@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('welcome');
 Route::view('/hukum', 'pages.hukum')->name('hukum');
+Route::view('/hukum/peraturan', '_hukum.peraturan.index')->name('peraturan');
 
 
 
