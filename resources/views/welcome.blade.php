@@ -7,38 +7,18 @@
 
     {{-- Header  --}}
     <header class="sticky top-1 z-50">
-        <nav class=" bg-white border-gray-700 shadow-xl px-4 lg:px-6 p-3 mx-10 dark:bg-gray-800 ">
+        <nav class=" bg-white border-gray-700 shadow-xl md:m-10">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="flex items-center text-center">
-                    <button id="toggleSidebar" aria-expanded="true" aria-controls="sidebar"
-                        class="hidden p-2 mr-3 text-gray-600 rounded cursor-pointer lg:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 16 12">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 1h14M1 6h14M1 11h7" />
-                        </svg>
-                    </button>
-                    <button aria-expanded="true" aria-controls="sidebar"
-                        class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer lg:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                        <svg class="w-[18px] h-[18px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
-                        <span class="sr-only">Toggle sidebar</span>
-                    </button>
-                    <a href="#" class="flex ms-2 md:me-24">
+                    <a href="#" class="flex m-2 md:me-24">
                         <img class="mr-3 h-8" src="{{ 'img/mydata_logo.png' }}" alt="mydata_logo">
                         <span class=" text-2xl">MYDATA.ID</span>
                     </a>
-
                 </div>
                 <div class="flex items-center lg:order-2">
-
-
-
-
                     @auth
+                    @else
+
                         <!-- Notifications -->
                         <button type="button" data-dropdown-toggle="notification-dropdown"
                             class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
@@ -136,8 +116,7 @@
                                         <div
                                             class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700">
                                             <svg class="w-2 h-2 text-white" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                viewBox="0 0 20 18">
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                                                 <path
                                                     d="M17.947 2.053a5.209 5.209 0 0 0-3.793-1.53A6.414 6.414 0 0 0 10 2.311 6.482 6.482 0 0 0 5.824.5a5.2 5.2 0 0 0-3.8 1.521c-1.915 1.916-2.315 5.392.625 8.333l7 7a.5.5 0 0 0 .708 0l7-7a6.6 6.6 0 0 0 2.123-4.508 5.179 5.179 0 0 0-1.533-3.793Z" />
                                             </svg>
@@ -405,14 +384,11 @@
                                 </li>
                             </ul>
                         </div>
-                    @else
                         <x-secondary-button class="bg-white text-sm">
                             <a href="{{ route('login') }}" class="text-xs text-gray-700 dark:text-gray-500">Log
                                 in
                             </a>
                         </x-secondary-button>
-
-
                         @if (Route::has('register'))
                             <x-secondary-button class="bg-white ml-2">
 
@@ -426,10 +402,10 @@
             </div>
         </nav>
     </header>
-
-    <main class=" mt-20 mx-5 ">
+    {{-- Main --}}
+    <main class="max-h-screen">
         {{-- Top Tabs --}}
-        <div class="m-5 bg-white border border-gray-700 shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <div class="m-10 bg-white border border-gray-700 shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div class="sm:hidden">
                 <label for="tabs" class="sr-only">Select tab</label>
                 <select id="tabs"
@@ -629,12 +605,10 @@
             </div>
         </div>
     </main>
-
-
-
-    {{--  --}}
+    {{-- Menu  --}}
     <div
-        class="grid gap-2 border-2 mx-10 border-gray-100 shadow-sm dark:border-white md:mb-12 md:grid-cols-3 bg-white dark:bg-gray-100">
+        class="flex flex-wrap justify-around border-1  my-10 mx-10 border-gray-100 shadow-sm dark:border-white  bg-white dark:bg-gray-100">
+        {{-- Hukum --}}
         <figure
             class="flex flex-col items-center justify-center p-8 text-center   border-gray-200   dark:bg-gray-800 dark:border-gray-700">
 
@@ -649,8 +623,9 @@
                 </x-secondary-button>
             </div>
         </figure>
+        {{-- Pendidikan --}}
         <figure
-            class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+            class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-200  dark:bg-gray-800 dark:border-gray-700">
             <figcaption class="flex items-center justify-center">
                 <img class="rounded-lg w-40" src="{{ asset('\img\mydata_pendidikan.png') }}" alt="mydata_hukum">
             </figcaption>
@@ -662,8 +637,9 @@
                 </x-secondary-button>
             </div>
         </figure>
+        {{-- Kesehatan  --}}
         <figure
-            class="flex flex-col items-center justify-center p-8 text-center  border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+            class="flex flex-col items-center justify-center p-8 text-center  dark:bg-gray-800 dark:border-gray-700">
             <figcaption class="flex items-center justify-center">
                 <img class="rounded-lg w-40" src="{{ asset('\img\mydata_kesehatan.png') }}" alt="mydata_hukum">
             </figcaption>
@@ -674,72 +650,21 @@
                 </x-secondary-button>
             </div>
         </figure>
-
-    </div>
-    {{--  --}}
-
-
-    {{-- <div
-        class="w-full p-4 text-center border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Work fast from anywhere</h5>
-        <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">Stay up to date and move work forward
-            with Flowbite on iOS & Android. Download the app today.</p>
-        <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
-            <a href="#"
-                class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-                <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple"
-                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                    <path fill="currentColor"
-                        d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z">
-                    </path>
-                </svg>
-                <div class="text-left rtl:text-right">
-                    <div class="mb-1 text-xs">Download on the</div>
-                    <div class="-mt-1 font-sans text-sm font-semibold">Mac App Store</div>
-                </div>
-            </a>
-            <a href="#"
-                class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">
-                <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
-                    data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor"
-                        d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z">
-                    </path>
-                </svg>
-                <div class="text-left rtl:text-right">
-                    <div class="mb-1 text-xs">Get in on</div>
-                    <div class="-mt-1 font-sans text-sm font-semibold">Google Play</div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    {{--  --}}
-    {{-- <div class="py-22 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most
-                innovative teams</h2>
-            <div
-                class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor"
-                    width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform"
-                    width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-                    src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple"
-                    width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-                    src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal"
-                    width="158" height="48">
-                <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-                    src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic"
-                    width="158" height="48">
+        {{-- Lainnya --}}
+        <figure
+            class="flex flex-col items-center justify-center p-8 text-center   dark:bg-gray-800 dark:border-gray-700">
+            <figcaption class="flex items-center justify-center">
+                <img class="rounded-lg w-40" src="{{ asset('\img\mydata_kesehatan.png') }}" alt="mydata_hukum">
+            </figcaption>
+            <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                <div class="dark:text-gray-400 text-2xl font-extrabold">Lainnya</div>
+                <x-secondary-button class="bg-white">
+                    <a href="{{ route('hukum') }}">Lainnya</a>
+                </x-secondary-button>
             </div>
-        </div>
-    </div>  --}}
+        </figure>
 
+    </div>
 </body>
 
 </html>
