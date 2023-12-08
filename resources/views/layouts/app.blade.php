@@ -3,7 +3,7 @@
 
 @include('layouts.mydata.head')
 
-<body class="font-sans antialiased">
+<body class="bg-cover bg-no-repeat" style="margin-top: -56px; background-image: url('/img/bg.jpg');">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
 
         @include('layouts.mydata.navigation')
