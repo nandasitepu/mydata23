@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Hukum\PeraturanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Main Pages
 Route::view('/', 'welcome')->name('welcome');
-Route::view('/hukum', 'pages.hukum')->name('hukum');
-Route::view('/hukum/peraturan', '_hukum.peraturan.index')->name('peraturan');
+
+Route::view('/hukum', 'pages.hukum.hukum')->name('hukum');
+Route::view('/pendidikan', 'pages.pendidikan.pendidikan')->name('pendidikan');
+Route::view('/kesehatan', 'pages.kesehatan.kesehatan')->name('kesehatan');
+Route::view('/bisnis', 'pages.bisnis.bisnis')->name('bisnis');
+Route::view('/data+', 'pages.data+.data+')->name('data+');
+
+Route::view('/sdank', 'pages._single.s-dan-k')->name('s_dan_k');
+Route::view('/faq', 'pages._single.faq')->name('faq');
+Route::view('/disclaimer', 'pages._single.disclaimer')->name('disclaimer');
+
+Route::view('/permintaan-data', 'pages._single.permintaan')->name('permintaan');
+Route::view('/statistik-kami', 'pages._single.statistik-kami')->name('statistik');
+Route::view('/tentang-kami', 'pages._single.tentang-kami')->name('tentang-kami');
+Route::view('/komentar-kritik-saran', 'pages._single.komentar-kritik-saran')->name('komentar-kritik-saran');
+
+
+// Route::view('/hukum/peraturan', '_hukum.peraturan.index')->name('peraturan');
 
 
 
@@ -29,5 +47,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+// Pages Resources Non Authentication
+// Route::resource('hukum', UserController::class);
+Route::resource('hukum/peraturan', PeraturanController::class);
+// Route::resource('pendidikan', UserController::class);
+// Route::resource('kesehatan', UserController::class);
+// Route::resource('bisnis', UserController::class);
 
 require __DIR__.'/auth.php';

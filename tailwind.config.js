@@ -16,7 +16,17 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                grape: ['Grape Nuts', "cursive"],
+                bebas: ['Bebas Neue', "sans-serif"],
             },
+            listStyleType: {
+                none: 'none',
+                disc: 'disc',
+                decimal: 'decimal',
+                square: 'square',
+                roman: 'upper-roman',
+                alphabet: 'lower-alpha',
+              }
         },
     },
 

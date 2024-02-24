@@ -1,27 +1,6 @@
-<div  class="fixed bottom-0 bg-white flex flex-row p-3 shadow-xl" id="copyright text-right">
-    © Copyright 2023+
-    <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
+<div class="flex justify-center sm:justify-end text-end border-t-2 border-black p-5 font-bold bg-gray-100 mt-5">
+    <div class="sm:visible col-span-1"></div>
+    <a href="{{route('disclaimer')}}"><div class="m-1 p-1 shadow-md border-2 border-black"> Disclaimer </div></a>
+    <a href="{{route('s_dan_k') }}"><div class="m-1 p-1 shadow-md border-2 border-black"> Syarat dan Ketentuan </div></a>
+        <a href="{{route('faq')}}"><div class="m-1 p-1 shadow-md border-2 border-black"> FAQ </div></a>
 </div>
-
-
-
-{{-- <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-    </span>
-    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline">Contact</a>
-        </li>
-    </ul>
-    </div>
-</footer> --}}
