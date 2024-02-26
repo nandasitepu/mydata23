@@ -2,10 +2,14 @@
     {{-- Main Hukum --}}
     <div class="mx-5">
         <div class="grid grid-cols-12">
-            <div class="col-span-3">
-                <ul>
-                    <li>Permintaan Data</li>
-                    <li>Komentar/Kritik/Saran</li>
+            <div class="col-span-3 p-5 text-sm">
+                <ul class="list-none">
+                    <li>
+                       <a href ="{{route('permintaan')}}"><button class="border-2 border-black shadow-md p-2 m-3"> Permintaan Data</button></a>
+                    </li>
+                    <li>
+                        <a href="{{route('komentar-kritik-saran')}}"><button class="border-2 border-black shadow-md p-2 m-3">    Komentar/Kritik/Saran</button></a>
+                    </li>
                 </ul>
             </div>
             <div class="col-span-9">

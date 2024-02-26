@@ -5,7 +5,7 @@
             <div class="text-3xl bg-gray-700 shadow-md shadow-yellow-200 text-white py-2">Hukum <i
                     class="fa fa-balance-scale text-white" aria-hidden="true"></i></div>
             <div class="flex justify-end p-2">
-                <a class="text-black font-semibold font-mono" href="#">
+                <a class="text-black font-semibold font-mono" href="{{route('peraturan.index')}}">
                     <div class="shadow-lg border-2 border-black p-2 m-1 text-sm">Peraturan <i
                             class="fa fa-book text-gray-500" aria-hidden="true"></i></div>
                 </a>
@@ -20,8 +20,8 @@
             </div>
         </div>
         {{-- Separator --}}
-        <div class="my-2 py-2 grid grid-cols-1 sm:grid-cols-4 gap-5 font-mono">
-            <div class="col border border-black p-5">
+        <div class="my-2 py-2 grid grid-cols-1 sm:grid-cols-5 sm:gap-5 font-mono">
+            <div class="col-span-1 sm:col-span-2 border border-black p-5">
                 <p class="text-2xl font-semibold"> Peraturan <i class="fa fa-location-arrow text-gray-500 float-right" aria-hidden="true"></i></p>
                 <hr>
                 <ol class="list-disc ml-5">
@@ -40,13 +40,13 @@
                 Peraturan Spesifik
                 <hr>
             </div>
-            <div class="col-span-2 p-5 bg-blue-100">
+            <div class="col-span-1 sm:col-span-3 p-5 bg-blue-100">
                 <p class="text-2xl font-semibold"> Penegak Hukum <i class="fa fa-users text-gray-500 float-right" aria-hidden="true"></i></p>
                 <hr>
                 <ol class="list-disc ml-5">
                     <li>
                         Pengadilan
-                        <ol class="list-disc ml-20">
+                        <ol class="list-disc ml-10">
                             <li>Pengadilan Negeri</li>
                             <li>Pengadilan Tinggi</li>
                             <li>Mahkamah Agung</li>
@@ -57,7 +57,7 @@
                     </li>
                     <hr>
                     <li>Kejaksaan
-                        <ol class="list-disc ml-20">
+                        <ol class="list-disc ml-10">
                             <li>Kejaksaan Negeri</li>
                             <li>Kejaksaan Tinggi</li>
                             <li>Kejaksaan Agung</li>
@@ -66,7 +66,7 @@
                     <hr>
                     <li>
                         Kepolisian
-                        <ol class="list-disc ml-20">
+                        <ol class="list-disc ml-10">
                             <li>Bhayangkara Pembina Keamanan dan Ketertiban Masyarakat</li>
                             <li>Kepolisian Sektor</li>
                             <li>Kepolisian Resor</li>
@@ -78,7 +78,7 @@
                     <li>Advokat</li>
                 </ol>
             </div>
-            <div class="col p-5 bg-yellow-100">
+            <div class="col-span-1 sm:col-span-2 p-5 bg-yellow-100">
                 <p class="text-2xl font-semibold">Jasa Legal <i class="fa fa-address-book text-gray-500 float-right" aria-hidden="true"></i></i></p>
                 <hr>
                 <ol class="list-disc ml-5">

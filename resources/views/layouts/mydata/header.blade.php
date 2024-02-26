@@ -80,7 +80,7 @@
                             Pendidikan
                         </button>
 
-                        <button class="px-3 py-2 text-sm font-medium text-black bg-yellow-200 border border-gray-400">
+                        <button class="px-3 py-2 text-sm font-medium text-black bg-yellow-100 border border-gray-400">
                             <i class="fa fa-book" aria-hidden="true"></i>
                         </button>
                     </a>
@@ -106,7 +106,7 @@
                         </button>
 
                         <button href="#"
-                            class="px-3 py-2 text-sm font-medium text-black bg-green-400 border border-gray-400">
+                            class="px-3 py-2 text-sm font-medium text-black bg-green-300 border border-gray-400">
                             <i class="fa fa-database" aria-hidden="true"></i>
                         </button>
                     </a>

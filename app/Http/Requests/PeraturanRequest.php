@@ -24,10 +24,14 @@ class PeraturanRequest extends FormRequest
     public function rules()
     {
         return [
+            'jenis' => ['sometimes'],
             'nomor' => ['sometimes'],
-            'uraian' => ['sometimes'],
-            'link1' => ['sometimes'],
-            'link2' => ['sometimes'],
+            'tentang' => ['sometimes'],
+            'tahun' => ['sometimes'],
+            'tanggal' => ['sometimes'],
+            'link_bt' => ['sometimes'],
+            'link_pjl' => ['sometimes'],
+            'link_gdrive' => ['sometimes'],
 
         ];
     }

@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class PeraturanModel extends Model
 {
     use HasFactory;
-    protected  $fillable =  ['nomor', 'uraian', 'link1', 'link2'];
-    protected $table = 'dt_peraturan';
+    protected  $fillable =  [
+        'uuid',
+        'jenis',
+        'nomor',
+        'tentang',
+        'tahun',
+        'status',
+        'tanggal',
+        'link_bt',
+        'link_pjl',
+        'link_gdrives'
+    ];
+    protected $table = 'dt_hukum_peraturan';
 }

@@ -8,14 +8,41 @@ use App\Models\Hukum\PeraturanModel;
 
 class PeraturanController extends Controller
 {
+
+    // public function search(Request $request)
+    // {
+    //     $keyword = $request->input('keyword');
+    //     $query = Book::where('judul', 'LIKE', '%' . $keyword . '%');
+
+    //     $book_list = $query->paginate(5);
+    //     $pagination = $book_list->appends($request->except('page'));
+    //     $total_book = $book_list->total();
+    //     return view('dashboards.index', compact('book_list', 'keyword', 'pagination', 'total_book'));
+    // }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $peraturan = PeraturanModel::latest()->get();
+
+        $jenis      = $request->jenis;
+        $tentang    = $request->tentang;
+        $nomor      = $request->nomor;
+        $tahun      = $request->tahun;
+        $status     = $request->status;
+
+        $peraturan = PeraturanModel::orderBy('id', 'desc')
+        ->where('jenis', 'like', "%".$jenis."%")
+        ->where('tentang', 'like', "%".$tentang."%")
+        ->where('nomor', 'like', "%".$nomor."%")
+        ->where('tahun', 'like', "%".$tahun."%")
+        ->where('status', 'like', "%".$status."%")
+        ->paginate(5);
+
+        // $peraturan = PeraturanModel::orderBy('id', 'desc')->paginate(5);
         return view('pages.hukum.peraturan.index', compact('peraturan'));
     }
 
