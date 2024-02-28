@@ -22,4 +22,7 @@
         //     document.documentElement.classList.remove('dark')
         // }
     </script>
+    {{-- Google Adsense --}}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
+    crossorigin="anonymous"></script>
 </head>
