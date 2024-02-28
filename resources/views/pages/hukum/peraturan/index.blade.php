@@ -115,6 +115,15 @@
                             </div>
                         </div>
                     </div>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
+                        crossorigin="anonymous"></script>
+                    <!-- MYDATA.ID - ADS 01 -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5839875324586738"
+                        data-ad-slot="9885579323" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || [])
+                        .push({});
+                    </script>
                 @endforeach
                 {{ $peraturan->links('pagination::tailwind') }}
             </div>
