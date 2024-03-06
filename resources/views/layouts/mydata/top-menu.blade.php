@@ -1,5 +1,5 @@
 <div class="text-2xl text-left px-5  border-black border-2 mx-5 ">
-    <div class="mt-2">Topik</div>
+    <div class="mt-2 font-bold font-mono">Topik</div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 py-5">
         <div class="col">
             <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">

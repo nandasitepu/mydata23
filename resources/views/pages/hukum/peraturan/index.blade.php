@@ -32,6 +32,7 @@
                 <div class="mb-2 font-bold">Pencarian</div>
                 {{-- Pencarian --}}
                 <form class="max-w-sm mx-auto" method="GET">
+                    @csrf
                     <div class="mb-5">
                         <input type="text" id="jenis" name="jenis"
                             class="bg-white border  text-gray-500  placeholder-gray-400  text-sm  block w-full p-2 "
@@ -63,13 +64,30 @@
                     <button type="button"
                         class="text-black border-2 border-black p-1 w-20 text-sm reset">Reset</button>
                 </form>
-
+                {{-- Ads --}}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
+                    crossorigin="anonymous"></script>
+                <!-- MYDATA.ID - ADS 01 -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5839875324586738" data-adtest="on"
+                    data-ad-slot="9885579323" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
                 {{-- Statistik Peraturan --}}
 
             </div>
             <div class="col-span-1 sm:col-span-9">
-                {{-- <div class="text-right text-sm text-gray-400 mb-2 pb-1">ditampilkan 1-10 dari 500 data</div> --}}
+                {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
+                    crossorigin="anonymous"></script>
+                <!-- MYDATA.ID - ADS 01 -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5839875324586738" data-adtest="on"
+                    data-ad-slot="9885579323" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script> --}}
+
                 {{ $peraturan->links() }}
+
                 @foreach ($peraturan as $p)
                     <div class="border border-black p-5 my-2">
                         <div class="py-3 border-b-2 border-black flex justify-between">
@@ -115,15 +133,6 @@
                             </div>
                         </div>
                     </div>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
-                        crossorigin="anonymous"></script>
-                    <!-- MYDATA.ID - ADS 01 -->
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5839875324586738"
-                        data-ad-slot="9885579323" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || [])
-                        .push({});
-                    </script>
                 @endforeach
                 {{ $peraturan->links('pagination::tailwind') }}
             </div>

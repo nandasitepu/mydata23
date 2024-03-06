@@ -1,8 +1,8 @@
 <x-main-layout>
     {{-- Main Hukum --}}
     <div class="mx-5">
-        <div class="grid grid-cols-12">
-            <div class="col-span-3 p-5 text-sm">
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-3 order-last p-5 text-sm">
                 <ul class="list-none">
                     <li>
                        <a href ="{{route('permintaan')}}"><button class="border-2 border-black shadow-md p-2 m-3"> Permintaan Data</button></a>
@@ -12,7 +12,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-span-9">
+            <div class="md:col-span-9 ">
                 <div class="text-xl font-extrabold font-mono text-center">Form Permintaan Data</div>
                 <hr class="border-2 border-black mb-5 ">
                 <form class="w-full sm:w-11/12 mx-auto">

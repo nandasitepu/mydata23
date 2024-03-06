@@ -1,4 +1,4 @@
-<div class="grid sm:grid-cols-3 gap-5 text-center ">
+<div class="grid sm:grid-cols-4 gap-5 text-center ">
     <div class="col sm:col-span-2 sm:text-left my-5">
         <a href="{{ route('permintaan') }}">
             <button type="button"
@@ -25,7 +25,7 @@
             </button>
         </a>
     </div>
-    <div class="col sm:col-span-1">
+    <div class="col sm:col-span-2 hidden sm:block">
         <div class="font-bold text-center text-xl border-y-2 border-black">SCAN ME</div>
         <img class="p-10 sm:p-5" src="{{ asset('/img/linktree-qr.png') }}">
     </div>

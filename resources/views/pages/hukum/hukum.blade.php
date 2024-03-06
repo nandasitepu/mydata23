@@ -2,7 +2,7 @@
     {{-- Main Hukum --}}
     <div class="mx-5">
         <div class="text-center border-b-2 border-black border-dashed mb-5">
-            <div class="text-3xl bg-gray-700 shadow-md shadow-yellow-200 text-white py-2">Hukum <i
+            <div class="text-3xl bg-gray-700 shadow-md shadow-gray-200 text-white py-2 rounded-md">Hukum <i
                     class="fa fa-balance-scale text-white" aria-hidden="true"></i></div>
             <div class="flex justify-end p-2">
                 <a class="text-black font-semibold font-mono" href="{{route('peraturan.index')}}">

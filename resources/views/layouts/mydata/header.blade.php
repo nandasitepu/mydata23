@@ -1,22 +1,25 @@
 {{-- Header  --}}
-<header class="  mx-5 border-b-2 border-black pb-5">
+<header class="  mx-5 pb-5">
     <nav class="">
         <div class="grid lg:grid-cols-5">
             {{-- Login /  Forum --}}
-            <div class="col self-center sm:order-last bg-red-200  p-2 rounded-md shadow-md">
+            <div class="col self-center sm:order-last bg-gray-200  p-2 rounded-md shadow-md">
                 @auth
                     <div class="text-center">
-                        <x-secondary-button class="bg-white text-sm">
-                            <a href="{{ route('dashboard') }}" class="text-xs text-gray-700 dark:text-gray-500">
-                                Dashboard
-                            </a>
-                        </x-secondary-button>
-                        <x-secondary-button class="bg-white text-sm">
-                            <a href="{{ route('profile.edit') }}" class="text-xs text-gray-700 dark:text-gray-500">
-                                Profil
-                            </a>
-                        </x-secondary-button>
+                        <a href="{{ route('dashboard') }}" class="">
+                            <x-secondary-button class="bg-white text-xs text-gray-700 dark:text-gray-500">
 
+                                DB
+
+                            </x-secondary-button>
+                        </a>
+                        <a href="{{ route('profile.edit') }}" class="">
+                            <x-secondary-button class="bg-white  text-xs text-gray-700 dark:text-gray-500">
+
+                                Profil
+
+                            </x-secondary-button>
+                        </a>
 
                         <form class="inline" method="POST" action="{{ route('logout') }}">
                             <x-primary-button class="text-sm text-white">
@@ -31,16 +34,20 @@
                     </div>
                 @else
                     <div class="text-center">
-                        <x-secondary-button class="bg-white text-sm">
-                            <a href="{{ route('login') }}" class="text-xs text-gray-700 dark:text-gray-500">
+                        <a href="{{ route('login') }}" class="">
+                            <x-secondary-button class="bg-white text-xs text-gray-700 dark:text-gray-500">
+
                                 Masuk
-                            </a>
-                        </x-secondary-button>
-                        <x-secondary-button class="bg-white text-sm">
-                            <a href="{{ route('login') }}" class="text-xs text-gray-700 dark:text-gray-500">
+
+                            </x-secondary-button>
+                        </a>
+                        <a href="{{ route('login') }}" class="">
+                            <x-secondary-button class="bg-white text-xs text-gray-700 dark:text-gray-500">
+
                                 Forum
-                            </a>
-                        </x-secondary-button>
+
+                            </x-secondary-button>
+                        </a>
                     </div>
                 @endauth
             </div>

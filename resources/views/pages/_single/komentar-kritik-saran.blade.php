@@ -1,11 +1,11 @@
 <x-main-layout>
     {{-- Main Hukum --}}
     <div class="mx-5">
-        <div class="grid grid-cols-12">
+        <div class="grid md:grid-cols-12">
             {{-- <div class="col-span-3 p-5">
 
             </div> --}}
-            <div class="col-span-4 border border-black p-2 m-2">
+            <div class="md:col-span-4 border border-black p-2 m-2">
                 <div class="text-xl font-extrabold font-mono text-center">Komentar / Kritik / Saran</div>
                 <hr class="border-2 border-black mb-5 ">
                 <form class="w-full sm:w-11/12 mx-auto">
@@ -44,7 +44,7 @@
                 </form>
             </div>
 
-            <div class="col-span-8">
+            <div class="md:col-span-8">
                 <ul class="list-none flex justify-end">
                     <li>
                         <a href ="{{ route('permintaan') }}"><button class="border-2 border-black shadow-md p-1 m-3 text-sm">
@@ -56,7 +56,7 @@
                     </li>
                 </ul>
                 <hr>
-                <p class="text-lg font-grape font-bold italic py-2">Tulis Kritik / Komentar / Saran Anda Disini</p>
+                <p class="text-lg font-grape font-bold italic py-2 text-center">Tulis Kritik / Komentar / Saran Anda Disini</p>
 
                 <div class="border-2  my-2 p-2">
                     <p class="text-blue-500 text-right my-2 border-b-2 border-red-500">nama</p>

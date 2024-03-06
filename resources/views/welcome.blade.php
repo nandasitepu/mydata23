@@ -1,11 +1,21 @@
 <x-main-layout>
     {{-- Main Hukum --}}
-    <div class="mx-5">
+    <div class="sm:mx-5">
         {{-- The Menu --}}
         @include('layouts.mydata.the-menu')
 
-        {{-- The Data --}}
-        @include('layouts.mydata.data')
+        <div class="grid md:grid-cols-12">
+            <div class="md:col-span-10">
+                {{-- The Articles --}}
+                @include('layouts.mydata.artikel')
+            </div>
+            <div class="md:col-span-2">
+                {{-- The Data Types --}}
+                @include('layouts.mydata.data')
+            </div>
+
+
+        </div>
     </div>
 
 </x-main-layout>
