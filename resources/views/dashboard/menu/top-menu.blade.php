@@ -2,14 +2,12 @@
 <nav
     class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
     <div class="block md:hidden border-2 p-2 border-black">
-        <a href="/" class="flex justify-center">
-            <img class="h-14 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
-            <span class="text-4xl p-2 font-mono font-bold"> DATA.ID</span>
+        <a href="/" class="flex justify-center ">
+            <img class="h-16 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
+            <span class="text-4xl p-2 font-bebas font-bold"> DATA.ID</span>
         </a>
     </div>
-    <div class="flex flex-wrap justify-between items-center">
-
-
+    <div class="flex flex-wrap justify-between items-center bg-gray-100 border-2 border-black px-5">
         {{-- Left Menu --}}
         <div class="flex justify-start items-center">
             <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
@@ -25,10 +23,10 @@
                 <span class="sr-only">Toggle sidebar</span>
             </button>
 
-            <div class="hidden md:block ">
+            <div class="hidden md:block">
                 <a href="/" class="flex items-center justify-between mr-4">
-                    <img class="h-14 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
-                    <span class="text-4xl px-2 text-blue-200 font-mono font-bold"> DATA.ID</span>
+                    <img class="h-14 my-2 border-2 border-red-300" src="{{ asset('/img/logo/MY.png') }}">
+                    <span class="text-5xl px-2 font-bebas ml-10"> DATA.ID</span>
                 </a>
             </div>
 
@@ -351,12 +349,10 @@
 
             {{-- User's Button --}}
             <button type="button"
-                class="flex mx-3 text-sm bg-gray-800 md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                class="flex mx-3 text-sm  md:mr-0 focus:ring-4 rounded-full focus:ring-gray-300 dark:focus:ring-gray-600"
                 id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                 <span class="sr-only">Open user menu</span>
-                <img class="w-8 h-8 rounded-full"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
-                    alt="user photo" />
+                <img class="rounded-lg w-8" src="{{ asset('/img/data-plus/avatar.png') }}" alt="mydata_user">
             </button>
             <!-- User's Dropdown menu -->
             <div class="hidden z-50 my-4 w-56 text-base list-none bg-white  divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
