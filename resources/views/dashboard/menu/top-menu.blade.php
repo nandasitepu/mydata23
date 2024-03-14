@@ -7,7 +7,7 @@
             <span class="text-4xl p-2 font-bebas font-bold"> DATA.ID</span>
         </a>
     </div>
-    <div class="flex flex-wrap justify-between items-center bg-gray-100 border-2 border-black px-5">
+    <div class="flex flex-wrap justify-between items-center bg-gray-100 border-2 border-gray-500 shadow-md px-5">
         {{-- Left Menu --}}
         <div class="flex justify-start items-center">
             <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
