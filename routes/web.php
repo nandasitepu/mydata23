@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Hukum\PeraturanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\SocialiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,11 @@ use App\Http\Controllers\GoogleController;
 
 // Main Pages
 Route::view('/', 'welcome')->name('welcome');
+
+// // Untuk menampilkan halaman
+// Route::get('/social-login', function () {
+//     return view('auth.social-login');
+// })->name('social-login');
 
 Route::view('/hukum', 'pages.hukum.hukum')->name('hukum');
 Route::view('/pendidikan', 'pages.pendidikan.pendidikan')->name('pendidikan');
@@ -48,10 +54,25 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::controller(GoogleController::class)->group(function(){
-    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
-    Route::get('auth/google/callback', 'handleGoogleCallback');
-});
+// Route::controller(GoogleController::class)->group(function(){
+//     Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+//     Route::get('auth/google/callback', 'handleGoogleCallback');
+// });
+
+// Untuk redirect ke Google
+Route::get('login/google/redirect', [SocialiteController::class, 'redirect'])
+    ->middleware(['guest'])
+    ->name('redirect');
+
+// Untuk callback dari Google
+Route::get('login/google/callback', [SocialiteController::class, 'callback'])
+    ->middleware(['guest'])
+    ->name('callback');
+
+// Untuk logout
+Route::post('logout', [SocialiteController::class, 'logout'])
+    ->middleware(['auth'])
+    ->name('logout');
 
 
 

@@ -4,7 +4,7 @@
         <div class="col">
             <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-20" src="{{ asset('\img\menu\hukum.png') }}" alt="mydata_hukum">
+                    <img class="rounded-lg w-20" src="{{ asset('/img/menu/hukum.png') }}" alt="mydata_hukum">
                 </figcaption>
 
                 <a href="{{ route('hukum') }}">
@@ -17,7 +17,7 @@
         <div class="col">
             <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-20" src="{{ asset('\img\menu\pendidikan.png') }}" alt="mydata_pendidikan">
+                    <img class="rounded-lg w-20" src="{{ asset('/img/menu/pendidikan.png') }}" alt="mydata_pendidikan">
                 </figcaption>
                 <a href="{{ route('pendidikan') }}">
                     <x-secondary-button  class="bg-white mt-5">
@@ -29,7 +29,7 @@
         <div class="col">
             <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-20" src="{{ asset('\img\menu\kesehatan.png') }}" alt="mydata_kesehatan">
+                    <img class="rounded-lg w-20" src="{{ asset('/img/menu/kesehatan.png') }}" alt="mydata_kesehatan">
                 </figcaption>
                 <a href="{{ route('kesehatan') }}">
                     <x-secondary-button  class="bg-white mt-5">
@@ -41,7 +41,7 @@
         <div class="col">
             <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2 ">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-20" src="{{ asset('\img\menu\publik.png') }}" alt="mydata_bisnis">
+                    <img class="rounded-lg w-20" src="{{ asset('/img/menu/publik.png') }}" alt="mydata_bisnis">
                 </figcaption>
                <a href="{{ route('data+') }}">
                     <x-secondary-button  class="bg-white mt-5">

@@ -7,7 +7,7 @@
             <figure
                 class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-16" src="{{ asset('\img\menu\chart.png') }}" alt="mydata_chart">
+                    <img class="rounded-lg w-16" src="{{ asset('/img/menu/chart.png') }}" alt="mydata_chart">
                 </figcaption>
 
                 <x-secondary-button class="bg-white mt-5">
@@ -19,7 +19,7 @@
             <figure
                 class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-16" src="{{ asset('\img\menu\newspaper.png') }}" alt="mydata_newspaper">
+                    <img class="rounded-lg w-16" src="{{ asset('/img/menu/newspaper.png') }}" alt="mydata_newspaper">
                 </figcaption>
                 <x-secondary-button class="bg-white mt-5">
                     BERITA
@@ -30,7 +30,7 @@
             <figure
                 class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-16" src="{{ asset('\img\menu\video-folder.png') }}" alt="mydata_video">
+                    <img class="rounded-lg w-16" src="{{ asset('/img/menu/video-folder.png') }}" alt="mydata_video">
                 </figcaption>
                 <x-secondary-button class="bg-white mt-5">
                     VIDEO
@@ -41,7 +41,7 @@
             <figure
                 class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2 ">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-16" src="{{ asset('\img\menu\gallery.png') }}" alt="mydata_photos">
+                    <img class="rounded-lg w-16" src="{{ asset('/img/menu/gallery.png') }}" alt="mydata_photos">
                 </figcaption>
                 <x-secondary-button class="bg-white mt-5">
                     Photos
@@ -52,7 +52,7 @@
             <figure
                 class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2 ">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-16" src="{{ asset('\img\menu\table.png') }}" alt="mydata_table">
+                    <img class="rounded-lg w-16" src="{{ asset('/img/menu/table.png') }}" alt="mydata_table">
                 </figcaption>
                 <x-secondary-button class="bg-white mt-5">
                     Tabel
@@ -63,7 +63,7 @@
             <figure
                 class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2 ">
                 <figcaption class="flex items-center justify-center">
-                    <img class="rounded-lg w-16" src="{{ asset('\img\menu\help.png') }}" alt="mydata_bantuan">
+                    <img class="rounded-lg w-16" src="{{ asset('/img/menu/help.png') }}" alt="mydata_bantuan">
                 </figcaption>
                 <x-secondary-button class="bg-white mt-5">
                    Bantuan

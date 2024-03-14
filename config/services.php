@@ -31,16 +31,16 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'gmail' => [
-        'client_id' => env('GMAIL_CLIENT_ID'),
-        'client_secret' => env('GMAIL_CLIENT_SECRET'),
-        'redirect' => env('GMAIL_REDIRECT'),
-    ],
+    // 'gmail' => [
+    //     'client_id' => env('GMAIL_CLIENT_ID'),
+    //     'client_secret' => env('GMAIL_CLIENT_SECRET'),
+    //     'redirect' => env('GMAIL_REDIRECT'),
+    // ],
 
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_REDIRECT'),
+        'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
 
 ];

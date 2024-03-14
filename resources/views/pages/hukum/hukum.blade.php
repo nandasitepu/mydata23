@@ -1,6 +1,7 @@
 <x-main-layout>
     {{-- Main Hukum --}}
     <div class="mx-5">
+        {{-- Header --}}
         <div class="text-center border-b-2 border-black border-dashed mb-5">
             <div class="text-3xl bg-gray-700 shadow-md shadow-gray-200 text-white py-2 rounded-md">Hukum <i
                     class="fa fa-balance-scale text-white" aria-hidden="true"></i></div>
@@ -19,8 +20,8 @@
                 </a>
             </div>
         </div>
-        {{-- Separator --}}
-        <div class="my-2 py-2 grid grid-cols-1 sm:grid-cols-5 sm:gap-5 font-mono">
+        {{-- Cards --}}
+        <div class="my-2 py-2 grid grid-cols-1 sm:grid-cols-6 sm:gap-5 font-mono">
             <div class="col-span-1 sm:col-span-2 border border-black p-5">
                 <p class="text-2xl font-semibold"> Peraturan <i class="fa fa-location-arrow text-gray-500 float-right" aria-hidden="true"></i></p>
                 <hr>
@@ -40,7 +41,7 @@
                 Peraturan Spesifik
                 <hr>
             </div>
-            <div class="col-span-1 sm:col-span-3 p-5 bg-blue-100">
+            <div class="col-span-1 sm:col-span-2 p-5 bg-blue-100">
                 <p class="text-2xl font-semibold"> Penegak Hukum <i class="fa fa-users text-gray-500 float-right" aria-hidden="true"></i></p>
                 <hr>
                 <ol class="list-disc ml-5">

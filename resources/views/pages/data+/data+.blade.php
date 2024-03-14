@@ -12,7 +12,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\menu\hukum.png') }}" alt="mydata_pendidikan">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/menu/hukum.png') }}" alt="mydata_pendidikan">
                     </figcaption>
                     <a href="{{ route('hukum') }}">
                         <x-secondary-button  class="bg-white mt-5">
@@ -24,7 +24,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\menu\pendidikan.png') }}" alt="mydata_pendidikan">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/menu/pendidikan.png') }}" alt="mydata_pendidikan">
                     </figcaption>
                     <a href="{{ route('pendidikan') }}">
                         <x-secondary-button  class="bg-white mt-5">
@@ -36,7 +36,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\menu\kesehatan.png') }}" alt="mydata_kesehatan">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/menu/kesehatan.png') }}" alt="mydata_kesehatan">
                     </figcaption>
                     <a href="{{ route('kesehatan') }}">
                         <x-secondary-button  class="bg-white mt-5">
@@ -48,7 +48,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\data-plus\investasi.png') }}" alt="mydata_investasi">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/data-plus/investasi.png') }}" alt="mydata_investasi">
                     </figcaption>
                     <a href="#">
                         <x-secondary-button  class="bg-white mt-5">
@@ -60,7 +60,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\data-plus\pertanian.png') }}" alt="mydata_pertanian">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/data-plus/pertanian.png') }}" alt="mydata_pertanian">
                     </figcaption>
                     <a href="#">
                         <x-secondary-button  class="bg-white mt-5">
@@ -72,7 +72,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\data-plus\perikanan.png') }}" alt="mydata_perikanan">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/data-plus/perikanan.png') }}" alt="mydata_perikanan">
                     </figcaption>
                     <a href="#">
                         <x-secondary-button  class="bg-white mt-5">
@@ -84,7 +84,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\data-plus\perternakan.png') }}" alt="mydata_perternakan">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/data-plus/perternakan.png') }}" alt="mydata_perternakan">
                     </figcaption>
                     <a href="#">
                         <x-secondary-button  class="bg-white mt-5">
@@ -96,7 +96,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\data-plus\pabrik.png') }}" alt="mydata_pabrik">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/data-plus/pabrik.png') }}" alt="mydata_pabrik">
                     </figcaption>
                     <a href="#">
                         <x-secondary-button  class="bg-white mt-5">
@@ -108,7 +108,7 @@
             <div class="col">
                 <figure class="flex flex-col items-center justify-center p-8 text-center border-gray-200 border-2">
                     <figcaption class="flex items-center justify-center">
-                        <img class="rounded-lg w-20" src="{{ asset('\img\data-plus\pariwisata.png') }}" alt="mydata_pariwisata">
+                        <img class="rounded-lg w-20" src="{{ asset('/img/data-plus/pariwisata.png') }}" alt="mydata_pariwisata">
                     </figcaption>
                     <a href="#">
                         <x-secondary-button  class="bg-white mt-5">
