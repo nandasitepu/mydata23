@@ -9,16 +9,7 @@ use App\Models\Hukum\PeraturanModel;
 class PeraturanController extends Controller
 {
 
-    // public function search(Request $request)
-    // {
-    //     $keyword = $request->input('keyword');
-    //     $query = Book::where('judul', 'LIKE', '%' . $keyword . '%');
 
-    //     $book_list = $query->paginate(5);
-    //     $pagination = $book_list->appends($request->except('page'));
-    //     $total_book = $book_list->total();
-    //     return view('dashboards.index', compact('book_list', 'keyword', 'pagination', 'total_book'));
-    // }
 
     /**
      * Display a listing of the resource.

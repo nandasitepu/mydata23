@@ -5,6 +5,8 @@ use App\Http\Controllers\Hukum\PeraturanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\SocialiteController;
+
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,10 +45,11 @@ Route::view('/komentar-kritik-saran', 'pages._single.komentar-kritik-saran')->na
 // Route::view('/hukum/peraturan', '_hukum.peraturan.index')->name('peraturan');
 
 
+Route::middleware('auth', 'verified')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+});
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
