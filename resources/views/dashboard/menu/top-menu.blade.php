@@ -1,8 +1,8 @@
 {{-- Top Navigation --}}
 <nav
-    class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+    class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 " id="logo-bar">
     <div class="block md:hidden border-2 p-2 border-black">
-        <a href="/" class="flex justify-center ">
+        <a href="/" class="flex justify-center" >
             <img class="h-16 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
             <span class="text-4xl p-2 font-bebas font-bold"> DATA.ID</span>
         </a>
@@ -435,3 +435,18 @@
         </div>
     </div>
 </nav>
+
+
+<script>
+    var lastScrollTop;
+    navbar = document.getElementById('logo-bar');
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            navbar.style.top = '-90px';
+        } else {
+            navbar.style.top = '0';
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>

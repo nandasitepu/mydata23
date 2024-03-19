@@ -18,15 +18,14 @@ return new class extends Migration
             $table->uuid('uuid')->nullable();
             $table->string('jenis')->nullable();
             $table->string('nomor')->nullable();
-            $table->string('tentang')->nullable();
-            $table->string('tahun')->nullable();
+            $table->text('tentang')->nullable();
+            $table->year('tahun')->nullable();
             $table->string('status')->nullable();
-            $table->date('tanggal')->nullable();
+            $table->string('tanggal')->nullable();
             $table->string('link_bt')->nullable();
             $table->string('link_pjl')->nullable();
             $table->string('link_gdrive')->nullable();
-            $table->year('tahun')->nullable();
-            $table->string('status')->nullable();
+
             $table->timestamps();
         });
     }

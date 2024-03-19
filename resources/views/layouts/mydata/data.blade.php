@@ -1,6 +1,6 @@
 <div class="text-xl mx-5 border-gray-50 border-2 font-mono">
 
-    <div class="text-center border-2 border-gray-500 ">Data</div>
+    <div class="text-center border-b-2 shadow-sm">Data</div>
     <div class="grid grid-cols-2 md:grid-cols-1 gap-2 py-5">
 
         <div class="col">

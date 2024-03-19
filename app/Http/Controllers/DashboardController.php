@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 //
-use App\Models\Hukum\PeraturanModel;
+use App\Models\Hukum\PeraturanHukum;
 use DataTables;
 
 class DashboardController extends Controller
@@ -14,7 +14,7 @@ class DashboardController extends Controller
     public function dashboard (Request $request)
     {
         if ($request->ajax()) {
-            $data = PeraturanModel::all();
+            $data = PeraturanHukum::all();
             return Datatables::of($data)
                     ->addIndexColumn()
                     // ->editColumn('jenis', function ($data) {

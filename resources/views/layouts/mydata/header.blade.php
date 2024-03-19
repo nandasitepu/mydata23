@@ -1,10 +1,10 @@
 {{-- Header  --}}
-<header class="mx-5 pb-5">
+<header class="mx-5 pb-5 border-b-2">
     {{-- Desktop View --}}
     <nav class="hidden md:block">
         <div class="grid lg:grid-cols-5">
             {{-- Login /  Forum --}}
-            <div class="col self-center sm:order-last p-2 rounded-md border-2 border-gray-200">
+            <div class="col self-center sm:order-last p-2">
                 @auth
                     <div class="flex justify-around">
 
@@ -276,26 +276,26 @@
                         </div>
                     </div>
                 @else
-                    <div class="flex justify-around font-mono font-bold">
-                        <a href="{{ route('redirect') }}">
-                            <button class="inline-flex border-2 items-center p-2">
-                                <img class="w-4 h-4 me-2" src="{{ asset('/img/data-plus/google-symbol.png') }}">
-                                Login
-                            </button>
-                        </a>
-                        <a href="{{ route('login') }}">
-                            <button class="inline-flex border-2 items-center p-2">
+                    <div class="flex justify-around font-mono">
+                        <div class="inline-flex items-center p-2">
+                            <a href="{{ route('login') }}" class="m-2">
+                                <div class="items-center border-2 p-1 shadow-xl text-sm"><img class="w-8 h-8 "
+                                        src="{{ asset('/img/data-plus/log-in.png') }}"></div>
+                            </a>
 
-                                Masuk
-                            </button>
-                        </a>
-                        <a href="{{ route('login') }}">
-                            <button class="inline-flex border-2 items-center p-2">
-
-                                Forum
-                            </button>
-                        </a>
+                            <a href="{{ route('redirect') }}" class="m-2">
+                                <div class="items-center border-2 p-1 shadow-xl text-sm">
+                                    <img class="w-8 h-8 p-1" src="{{ asset('/img/data-plus/google-symbol.png') }}">
+                                </div>
+                            </a>
+                            <a href="{{ route('redirect') }}" class="m-2">
+                                <div class="items-center border-2 p-1 shadow-xl text-sm">
+                                    <img class="w-8 h-8 p-1" src="{{ asset('/img/data-plus/facebook.png') }}">
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    <p class="text-sm text-center border-t-2 font-grape"> Masuk / Daftar / Lihat-Lihat </p>
                 @endauth
             </div>
 
@@ -304,7 +304,7 @@
                 <a href={{ route('welcome') }}>
                     <div class="justify-center flex my-2">
                         <img class="h-20 p-2 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
-                        <div class="text-4xl p-5 px-2"> DATA.ID</div>
+                        <div class="text-5xl p-5 px-2 font-bebas ms-4"> DATA.ID</div>
                     </div>
                 </a>
             </div>
@@ -370,17 +370,16 @@
                         </a>
                     </div>
                     {{-- Slogan --}}
-                    <div class="font-sm font-mono text-gray-400 text-center bg-gray-50 mx-10 italic">
-                        " Mengumpulkan, mengolah, dan menyajikan data indonesia lebih baik ..."
-
+                    <div class="font-sm font-grape text-gray-400 text-center bg-gray-50 mx-10 italic">
+                        " Data Indonesia dari Rakyat untuk Rakyat ...."
                     </div>
                 </div>
             </div>
         </div>
     </nav>
     {{-- Mobile View --}}
-    <nav class="block md:hidden">
-        <div class="border-2 m-2 p-2 border-black">
+    <nav class="block md:hidden fixed left-0 right-0 top-0 py-2   bg-gray-100" id="logo-bar">
+        <div class="border-2 m-2 p-2 border-black" >
             <a href="/" class="flex justify-center ">
                 <img class="h-14 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
                 <span class="text-4xl p-3 font-bebas"> DATA.ID</span>
@@ -811,3 +810,17 @@
 
     </nav>
 </header>
+
+<script>
+    var lastScrollTop;
+    navbar = document.getElementById('logo-bar');
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            navbar.style.top = '-90px';
+        } else {
+            navbar.style.top = '0';
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>

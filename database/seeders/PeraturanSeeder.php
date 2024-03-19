@@ -1,10 +1,11 @@
 <?php
 
-namespace Database\Seeders\Hukum;
+namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Hukum\PeraturanModels;
+use Faker\Factory as Faker;
+use App\Models\Hukum\PeraturanHukum;
 
 class PeraturanSeeder extends Seeder
 {
@@ -15,16 +16,17 @@ class PeraturanSeeder extends Seeder
      */
     public function run()
     {
-        PeraturanModels::truncate();
-
-        $csvFile = fopen(base_path("database/csv/hukum_peraturan.csv"), "r");
+        PeraturanHukum::truncate();
+        $faker = Faker::create();
+        $csvFile = fopen(base_path("database/csv/hukum/peraturan.csv"), "r");
 
         $firstline = true;
         while (($data = fgetcsv($csvFile, 2000, ",")) !== FALSE) {
             if (!$firstline) {
-                PeraturanModels::create([
+                PeraturanHukum::create([
                     "id"   => $data['0'],
-                    "uuid" => $data['1'],
+                    // "uuid" => $data['1'],
+                    "uuid" => $faker->uuid(),
                     "jenis" => $data['2'],
                     "nomor" => $data['3'],
                     "tentang" => $data['4'],
@@ -34,8 +36,8 @@ class PeraturanSeeder extends Seeder
                     "link_bt" => $data['8'],
                     "link_pjl" => $data['9'],
                     "link_gdrive" => $data['10'],
-                    "created_at" => $data['11'],
-                    "modified_at" => $data['12'],
+                    // "created_at" => $data['11'],
+                    // "updated_at" => $data['12'],
                 ]);
             }
             $firstline = false;

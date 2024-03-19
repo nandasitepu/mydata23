@@ -2,39 +2,19 @@
 
 namespace App\Http\Controllers\Hukum;
 
-use App\Http\Controllers\Controller;
+use App\Models\Hukum\InstansiHukum;
 use Illuminate\Http\Request;
-use App\Models\Hukum\PeraturanHukum;
 
-class PeraturanHukumController extends Controller
+class InstansiHukumController extends Controller
 {
-
-
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        $jenis      = $request->jenis;
-        $tentang    = $request->tentang;
-        $nomor      = $request->nomor;
-        $tahun      = $request->tahun;
-        $status     = $request->status;
-
-        $peraturan = PeraturanModel::orderBy('id', 'desc')
-        ->where('jenis', 'like', "%".$jenis."%")
-        ->where('tentang', 'like', "%".$tentang."%")
-        ->where('nomor', 'like', "%".$nomor."%")
-        ->where('tahun', 'like', "%".$tahun."%")
-        ->where('status', 'like', "%".$status."%")
-        ->paginate(5);
-
-        // $peraturan = PeraturanModel::orderBy('id', 'desc')->paginate(5);
-        return view('pages.hukum.peraturan.index', compact('peraturan'));
+        //
     }
 
     /**
@@ -61,10 +41,10 @@ class PeraturanHukumController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Hukum\InstansiHukum  $instansiHukum
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(InstansiHukum $instansiHukum)
     {
         //
     }
@@ -72,10 +52,10 @@ class PeraturanHukumController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Hukum\InstansiHukum  $instansiHukum
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(InstansiHukum $instansiHukum)
     {
         //
     }
@@ -84,10 +64,10 @@ class PeraturanHukumController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Hukum\InstansiHukum  $instansiHukum
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, InstansiHukum $instansiHukum)
     {
         //
     }
@@ -95,10 +75,10 @@ class PeraturanHukumController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Hukum\InstansiHukum  $instansiHukum
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(InstansiHukum $instansiHukum)
     {
         //
     }
