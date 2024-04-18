@@ -13,7 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('dt_hukum_jasa', function (Blueprint $table) {
+            $table->id();
+            $table->uuid('uuid')->nullable();
+            $table->string('penyedia_jasa')->nullable();
+            $table->string('jenis_jasa')->nullable();
+            $table->string('detail')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('kontak')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('dt_hukum_jasa');
     }
 };

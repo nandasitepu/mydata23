@@ -19,7 +19,7 @@
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/hukum.png') }}" alt="mydata_hukum">
+                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/hukum.png') }}" alt="mydata_hukum">
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Hukum</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/pendidikan.png') }}" alt="mydata_pendidikan">
+                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/pendidikan.png') }}" alt="mydata_pendidikan">
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Pendidikan</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +75,7 @@
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-kesehatan" data-collapse-toggle="dropdown-kesehatan">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/kesehatan.png') }}" alt="mydata_kesehatan">
+                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/kesehatan.png') }}" alt="mydata_kesehatan">
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Kesehatan</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">

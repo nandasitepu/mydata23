@@ -18,10 +18,10 @@ class SocialiteController extends Controller
     public function callback()
     {
         // Google user object dari google
-        $userFromGoogle = Socialite::driver('google')->user();
+        $userFromGoogle = Socialite::driver('google')->stateless()->user();
 
         // Ambil user dari database berdasarkan google user id
-        $userFromDatabase = User::where('google_id', $userFromGoogle->getId())->first();
+        $userFromDatabase = User::where('email', $userFromGoogle->getEmail())->first();
 
         // Jika tidak ada user, maka buat user baru
         if (!$userFromDatabase) {

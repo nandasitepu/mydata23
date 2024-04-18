@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('dt_hukum_instansi', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->nullable();
-            $table->string('instansi')->nullable();
+            $table->string('nama')->nullable();
+            $table->string('jenis')->nullable();
+            $table->string('detail')->nullable();
             $table->string('koordinat')->nullable();
             $table->string('foto')->nullable();
             $table->string('alamat')->nullable();

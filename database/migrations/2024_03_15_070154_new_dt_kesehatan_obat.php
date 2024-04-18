@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('dt_kesehatan_obat', function (Blueprint $table) {
+            $table->id();
+            $table->uuid('uuid')->nullable();
+            $table->string('nama')->nullable();
+            $table->string('jenis')->nullable();
+            $table->string('detail')->nullable();
+            $table->string('foto')->nullable();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('dt_kesehatan_obat');
     }
 };

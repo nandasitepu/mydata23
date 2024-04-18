@@ -6,6 +6,7 @@ use App\Http\Controllers\SocialiteController;
 //
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArtikelController;
 //
 use App\Http\Controllers\Hukum\PeraturanHukumController;
 /*
@@ -56,6 +57,7 @@ Route::controller(SocialiteController::class)
         Route::post('logout, logout')->middleware('auth')->name('logout');
     });
 
+Route::resource('artikel', ArtikelController::class);
 
 
 

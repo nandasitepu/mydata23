@@ -2,20 +2,24 @@
     {{-- Main Hukum --}}
     <div class="sm:mx-5">
         {{-- The Menu --}}
-        @include('layouts.mydata.the-menu')
+        {{-- @include('layouts.mydata.top-menu') --}}
 
-        <div class="grid md:grid-cols-12">
+        @include('layouts.mydata.main-accordion')
+        {{-- @include('layouts.mydata.horizontal-menu') --}}
+        {{-- @include('layouts.mydata.newsletter') --}}
+        {{-- @include('layouts.mydata.artikel2') --}}
+        {{-- <div class="grid md:grid-cols-12">
             <div class="md:col-span-10">
-                {{-- The Articles --}}
-                @include('layouts.mydata.artikel')
+                @include('layouts.mydata.artikel2')
             </div>
-            <div class="md:col-span-2">
-                {{-- The Data Types --}}
-                @include('layouts.mydata.data')
+            <div class="col-span-2 md:col-span-1">
+                @include('layouts.mydata.types')
             </div>
+        </div> --}}
+        <hr>
+        @include('layouts.mydata.main-accordion2')
 
 
-        </div>
     </div>
 
 </x-main-layout>
