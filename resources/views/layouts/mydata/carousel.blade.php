@@ -3,7 +3,7 @@
         <!-- Carousel wrapper -->
         <div class="overflow-hidden relative h-80 rounded-sm ">
             <!-- Item 1 -->
-            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-5"
                 data-carousel-item="">
                 <img src="{{ asset('img/bg.jpg') }}" class="block absolute  object-fill h-full w-full" alt="">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 border-2 bg-black border-white text-white px-5">

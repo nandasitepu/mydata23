@@ -1,23 +1,21 @@
 <x-main-layout>
     {{-- Main Hukum --}}
-    <div class="sm:mx-5">
+    <div class="sm:m-5">
         {{-- The Menu --}}
         {{-- @include('layouts.mydata.top-menu') --}}
 
-        @include('layouts.mydata.main-accordion')
-        {{-- @include('layouts.mydata.horizontal-menu') --}}
-        {{-- @include('layouts.mydata.newsletter') --}}
-        {{-- @include('layouts.mydata.artikel2') --}}
-        {{-- <div class="grid md:grid-cols-12">
-            <div class="md:col-span-10">
-                @include('layouts.mydata.artikel2')
+        <div>
+            @include('layouts.mydata.main-accordion')
+            {{-- hidden sidemenu --}}
+            <div class="block md:hidden">
+                @include('dashboard.menu.side-menu')
             </div>
-            <div class="col-span-2 md:col-span-1">
-                @include('layouts.mydata.types')
-            </div>
-        </div> --}}
-        <hr>
-        @include('layouts.mydata.main-accordion2')
+        </div>
+
+
+        <div class="bg-gray-100 rounded-xl">
+            @include('layouts.mydata.main-accordion2')
+        </div>
 
 
     </div>

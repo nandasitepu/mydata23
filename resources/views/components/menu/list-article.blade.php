@@ -1,4 +1,4 @@
-<div class="mx-5 border-2 border-gray-400 p-5 flex">
+<div class="border-2 border-gray-400 p-5 flex">
     <list>
         <div class="font-mono text-lg font-bold">Artikel</div>
         <div class="flex justify-between text-sm">
@@ -53,6 +53,4 @@
 
         </div>
     </list>
-
-
 </div>

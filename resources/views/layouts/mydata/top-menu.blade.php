@@ -1,4 +1,4 @@
-<div class="grid sm:grid-cols-1 md:grid-cols-12 gap-4 mt-32 md:mt-0  mx-5">
+<div class="grid sm:grid-cols-1 md:grid-cols-12 gap-4 md:mt-0">
     <div class="md:col-span-6">
         {{-- Top Menu  --}}
 
