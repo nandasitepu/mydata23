@@ -1,18 +1,18 @@
 {{-- Big Screen Header  --}}
-<div class="sm:block hidden mb-5">
-    <header class="bg-gray-50 shadow-lg py-3">
-        <div class="grid sm:grid-cols-12">
-            <div class="col sm:col-span-3 px-5">
+<div class="lg:block hidden mb-5 ">
+    <header class="bg-gray-50 shadow-lg py-3 z-[100]">
+        <div class="grid grid-cols md:grid-cols-12">
+            <div class="col lg:col-span-3 px-5">
                 {{-- Logo --}}
                 <a href={{ route('welcome') }}>
                     <div class="flex justify-center items-center sm:mx-5 mt-2">
                         <img class="h-12 sm:h-20 border-4 border-red-500 rounded-xl" src="{{ asset('/img/logo/MY.png') }}">
-                        <div class="text-xl sm:text-5xl sm:my-5 mx-2 font-bebas">DATA.ID</div>
+                        <div class="text-xl xl:text-5xl xl:my-5 mx-2 font-mono">DATA.ID</div>
                         <img class="h-4" src="{{ asset('/img/data-plus/loveid.png') }}">
                     </div>
                 </a>
             </div>
-            <div class="col text-center sm:col-span-6 sm:flex sm:justify-around px-5 sm:pt-8">
+            <div class="col lg:col-span-6 xl:flex xl:justify-around px-5 xl:pt-8 text-center">
                 <div class="text-sm sm:text-lg font-mono italic font-bold text-red-500 py-2">
                     <p>"Data Indonesia untuk semua ..."</p>
                 </div>
@@ -41,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="col sm:col-span-3 bg-white">
+            <div class="col lg:col-span-3 bg-white">
                 <div class="col sm:float-right sm:me-10 sm:order-last">
                     @auth
                         <div class="flex justify-around">
@@ -348,9 +348,9 @@
 
 
 {{--    Small Screen --}}
-<div class="block sm:hidden mb-20">
+<div class="block lg:hidden mb-20 ">
     <nav
-        class="bg-white border-b border-gray-200 p-1 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 " id="logo-bar">
+        class="bg-white border-b border-gray-200 p-1 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-[100] " id="logo-bar">
         <div class="block md:hidden border-2 p-2 border-black">
             <a href="/" class="flex justify-center" >
                 <img class="h-16 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">

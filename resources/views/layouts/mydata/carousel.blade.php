@@ -1,9 +1,9 @@
 <div class="mx-5">
-    <div id="default-carousel" class="relative w-full delay-1000" data-carousel="slide">
+    <div id="default-carousel" class="relative w-full delay-1000  " data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="overflow-hidden relative h-80 rounded-sm ">
             <!-- Item 1 -->
-            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-5"
+            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0"
                 data-carousel-item="">
                 <img src="{{ asset('img/bg.jpg') }}" class="block absolute  object-fill h-full w-full" alt="">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 border-2 bg-black border-white text-white px-5">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out bg-red-500" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('img/bg2.jpg') }}" class="block absolute  object-fill h-full w-full" alt="">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 border-2 bg-black border-white text-white px-5">
                     <p>Pariwisata</p>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out bg-green-500" data-carousel-item>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="{{ asset('img/bg3.jpg') }}" class="block absolute  object-fill h-full w-full" alt="">
                 <div class="absolute top-0 left-1/2 -translate-x-1/2 border-2 bg-black border-white text-white px-5">
                     <p>Pariwisata</p>
@@ -53,7 +53,7 @@
             </div>
         </div>
         <!-- Slider indicators -->
-        <div class="flex absolute bottom-2 justify-center space-x-5 left-1/2 -translate-x-1/2 z-30 ">
+        <div class="flex absolute bottom-2 justify-center space-x-5 left-1/2 -translate-x-1/2">
             <button type="button" class="w-2 h-2 bg-black border-black" aria-current="false" aria-label="Slide 1"
                 data-carousel-slide-to="0"></button>
             <button type="button" class="w-2 h-2" aria-current="false" aria-label="Slide 2"
@@ -73,7 +73,4 @@
             </span>
         </button>
     </div>
-
-
-
 </div>
