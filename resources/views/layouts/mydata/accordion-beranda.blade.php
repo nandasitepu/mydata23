@@ -2,7 +2,7 @@
 <!-- Accordion component -->
 <div class=" mx-5">
     <!-- Accordion Beranda -->
-    <div x-data="{ expanded: false }" class="py-2">
+    <div x-data="{ expanded: true }" class="py-2">
         <h2>
             <button id="faqs-title-01" type="button"
                 class="flex items-center justify-between w-full text-left font-semibold py-2  px-5 shadow-black shadow-sm"
@@ -29,8 +29,8 @@
             </div>
         </div>
     </div>
-    <!-- Accordion Produk dan Jasa -->
-    <div x-data="{ expanded: false }" class="py-2">
+    {{-- Produk / Jasa / Harga --}}
+    <div x-data="{ expanded: true }" class="py-2">
         <h2>
             <button id="faqs-title-02" type="button"
                 class="flex items-center justify-between w-full text-left font-semibold py-2 px-5 shadow-red-500 shadow-sm"
@@ -83,11 +83,12 @@
                     {{--  --}}
                     <div class="border border-black p-5">
                         <div class="flex flex-col justify-between h-72">
-                           <div>
+                            <div>
                                 <p class="font-mono text-xl font-bold">Pengguna Super</p>
                                 <p>Butuh Data</p>
                                 <div class="border border-black p-2 text-center font-bold">
-                                    <span class="line-through decoration-red-500 decoration-2">Rp 25.000</span> Rp 10.000 / tahun
+                                    <span class="line-through decoration-red-500 decoration-2">Rp 25.000</span> Rp
+                                    10.000 / tahun
                                 </div>
                                 <ul class="list-disc m-5">
                                     <li>Akses data publik +</li>
@@ -95,7 +96,7 @@
                                     <li>Papan Data (Dashboard) + </li>
                                     <li>Bebas Iklan</li>
                                 </ul>
-                           </div>
+                            </div>
                             <div class="p-2 w-1/2 text-center shadow-sm shadow-black font-bold">
                                 Gabung <i class="ml-5 fa fa-sign-in" aria-hidden="true"></i>
                             </div>
@@ -108,7 +109,8 @@
                                 <p class="font-mono text-xl font-bold">Data Agen</p>
                                 <p>Pengen Bantu Cari Data</p>
                                 <div class="border border-black p-2 text-center font-bold">
-                                    <span class="line-through decoration-red-500 decoration-2">Rp 50.000</span> Rp 25.000 / tahun
+                                    <span class="line-through decoration-red-500 decoration-2">Rp 50.000</span> Rp
+                                    25.000 / tahun
                                 </div>
                                 <ul class="list-disc m-5">
                                     <li>Akses semua data publik kami +</li>
@@ -142,8 +144,7 @@
                                 </ul>
                             </div>
                             <div class="">
-                                <div
-                                    class="p-2 w-1/2 text-center shadow-sm shadow-black font-bold">
+                                <div class="p-2 w-1/2 text-center shadow-sm shadow-black font-bold">
                                     Gabung <i class="ml-5 fa fa-sign-in" aria-hidden="true"></i>
                                 </div>
                             </div>

@@ -38,7 +38,8 @@
           </div>
       </div>
       <!-- Accordion item -->
-      <div x-data="{ expanded: false }" class="py-2">
+      {{-- Tulisan / Artikel / Opini / Cerita / Fiksi</span> --}}
+      <div x-data="{ expanded: true }" class="py-2">
           <h2>
               <button id="faqs-title-01" type="button"
                   class="flex items-center justify-between w-full text-left font-semibold py-2 px-5 shadow-blue-500 shadow-sm"
