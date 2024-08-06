@@ -4,11 +4,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialiteController;
 //
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArtikelController;
+
 //
 use App\Http\Controllers\Hukum\PeraturanHukumController;
+use App\Http\Controllers\Posting\PostingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +25,7 @@ use App\Http\Controllers\Hukum\PeraturanHukumController;
 
 // Main Pages
 Route::view('/', 'welcome')->name('welcome');
+Route::view('/test', 'test')->name('test');
 //
 Route::view('/hukum', 'pages.hukum.hukum')->name('hukum');
 Route::view('/pendidikan', 'pages.pendidikan.pendidikan')->name('pendidikan');
@@ -58,6 +62,8 @@ Route::controller(SocialiteController::class)
     });
 
 Route::resource('artikel', ArtikelController::class);
+
+Route::resource('posting', PostingController::class);
 
 
 

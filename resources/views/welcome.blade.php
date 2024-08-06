@@ -1,20 +1,13 @@
 <x-main-layout>
     {{-- Main Hukum --}}
-    <div class="sm:m-5">
+    <div class="bg-green-300">
         {{-- Beranda --}}
-        <div class="bg-white">
-            @include('layouts.mydata.accordion-beranda')
-        </div>
-
+        <section>
+            @include('layouts.mydata.top-menu')
+        </section>
         {{-- Artikel dan Data --}}
-        <div class="bg-white">
+        <section class="">
             @include('layouts.mydata.accordion-artikel-data')
-        </div>
-
-        {{-- Hidden Sidemenu --}}
-        <div class="block md:hidden">
-            @include('dashboard.menu.side-menu')
-        </div>
+        </section>
     </div>
-
 </x-main-layout>

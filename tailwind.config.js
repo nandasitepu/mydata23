@@ -18,6 +18,7 @@ module.exports = {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 grape: ['Grape Nuts', "cursive"],
                 bebas: ['Bebas Neue', "sans-serif"],
+                bunge: ['Bunge Shade', "regular"],
             },
             listStyleType: {
                 none: 'none',
@@ -26,6 +27,31 @@ module.exports = {
                 square: 'square',
                 roman: 'upper-roman',
                 alphabet: 'lower-alpha',
+              },
+              animation: {
+                wiggle: 'wiggle 1s ease-in-out infinite',
+              },
+              keyframes: {
+                typing: {
+                  "0%": {
+                    width: "0%",
+                    visibility: "hidden"
+                  },
+                  "100%": {
+                    width: "100%"
+                  }
+                },
+                blink: {
+                  "50%": {
+                    borderColor: "transparent"
+                  },
+                  "100%": {
+                    borderColor: "white"
+                  }
+                }
+              },
+              animation: {
+                typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
               }
         },
     },
@@ -33,7 +59,7 @@ module.exports = {
     plugins: [
         require('@tailwindcss/forms'),
         require('flowbite/plugin'),
-
+        require('@tailwindcss/typography'),
     ],
 
 };

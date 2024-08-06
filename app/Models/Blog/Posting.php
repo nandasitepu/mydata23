@@ -11,8 +11,9 @@ class Posting extends Model
     protected  $fillable =  [
         'judul',
         'isi',
-        'image',
+        'gambar',
         'kategori',
+        'penulis'
     ];
-    protected $table = 't_blog_posting';
+    protected $table = 't_blog';
 }
