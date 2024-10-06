@@ -7,7 +7,7 @@ use Illuminate\View\View;
 
 class MainLayout extends Component
 {
-    public $title;
+    public $title = null;
     public $fonts = null;
     public $styles = null;
     public $scripts = null;

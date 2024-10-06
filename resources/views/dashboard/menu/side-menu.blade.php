@@ -1,34 +1,33 @@
 <!-- Sidebar -->
-<aside
-    class="fixed top-0 left-0 z-40 w-64 h-screen  transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-    aria-label="Sidenav" id="drawer-navigation">
-    <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800 z-100">
+<aside class="hidden md:block fixed top-0 left-0 z-100 w-64 h-screen" aria-label="Sidenav">
+    <div class="overflow-y-auto py-5 px-3 h-full bg-red-200 dark:bg-gray-800 z-100">
         <ul class="space-y-2">
-            <a href="/" class="flex justify-center ">
-                <img class="h-14 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
-                <span class="text-4xl p-3 font-bebas"> DATA.ID</span>
-            </a>
+
             <li>
-                <a href="#"
+                <a wire:navigate href="{{ route('dashboard') }}"
                     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/data-plus/dashboard.png') }}" alt="mydata_dashboard">
+                    <img class="rounded-lg w-6" src="{{ asset('/img/data-plus/dashboard.png') }}" alt="mydata_dashboard">
                     <span class="ml-3">Overview</span>
                 </a>
             </li>
             <li>
-                <button type="button"
-                    class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/hukum.png') }}" alt="mydata_hukum">
-                    <span class="flex-1 ml-3 text-left whitespace-nowrap">Hukum</span>
-                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                <div class="flex items-center justify-between p-2 w-full transition duration-75 hover:bg-gray-100">
+                    <a wire:navigate href="#" class="flex hover:text-xl p-3">
+                        <img class="rounded-lg w-6" src="{{ asset('/img/menu/icons/hukum.png') }}" alt="mydata_hukum">
+                        <span class="flex-1 ml-3 text-left">Hukum</span>
+                    </a>
+
+
+                    <button type="button" aria-controls="dropdown-pages2" data-collapse-toggle="dropdown-pages2">
+                        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul id="dropdown-pages2" class="hidden py-2 space-y-2">
                     <li>
                         <a href="#"
                             class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Peraturan</a>
@@ -46,8 +45,9 @@
             <li>
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/pendidikan.png') }}" alt="mydata_pendidikan">
+                    aria-controls="dropdown-sales2" data-collapse-toggle="dropdown-sales2">
+                    <img class="rounded-lg w-6" src="{{ asset('/img/menu/icons/pendidikan.png') }}"
+                        alt="mydata_pendidikan">
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Pendidikan</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <ul id="dropdown-sales" class="hidden py-2 space-y-2">
+                <ul id="dropdown-sales2" class="hidden py-2 space-y-2">
                     <li>
                         <a href="#"
                             class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sekolah</a>
@@ -74,8 +74,9 @@
             <li>
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                    aria-controls="dropdown-kesehatan" data-collapse-toggle="dropdown-kesehatan">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/kesehatan.png') }}" alt="mydata_kesehatan">
+                    aria-controls="dropdown-kesehatan2" data-collapse-toggle="dropdown-kesehatan2">
+                    <img class="rounded-lg w-6" src="{{ asset('/img/menu/icons/kesehatan.png') }}"
+                        alt="mydata_kesehatan">
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Kesehatan</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +85,7 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <ul id="dropdown-kesehatan" class="hidden py-2 space-y-2">
+                <ul id="dropdown-kesehatan2" class="hidden py-2 space-y-2">
                     <li>
                         <a href="#"
                             class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Faskes</a>
@@ -104,7 +105,8 @@
                 <button type="button"
                     class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     aria-controls="dropdown-authentication" data-collapse-toggle="dropdown-authentication">
-                    <img class="rounded-lg w-10" src="{{ asset('/img/data-plus/data-plus.png') }}" alt="mydata_data-plus">
+                    <img class="rounded-lg w-6" src="{{ asset('/img/data-plus/data-plus.png') }}"
+                        alt="mydata_data-plus">
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">Data +</span>
                     <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">

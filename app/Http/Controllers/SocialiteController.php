@@ -38,14 +38,15 @@ class SocialiteController extends Controller
             auth('web')->login($newUser);
             session()->regenerate();
 
-            return redirect('/dashboard');
+            return redirect('/');
         }
 
         // Jika ada user langsung login saja
         auth('web')->login($userFromDatabase);
+
         session()->regenerate();
 
-        return redirect('/dashboard ');
+        return redirect('/ ');
     }
 
     public function logout(Request $request)

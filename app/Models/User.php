@@ -5,13 +5,15 @@ namespace App\Models;
 
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\Role;
+use App\Models\Subscribed;
+use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 // use Laravel\Fortify\TwoFactorAuthenticatable;
 
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
@@ -30,8 +32,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'google_id'
+        'google_id',
+        'role_id',
+        'subscribed_id'
     ];
+
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -61,4 +67,20 @@ class User extends Authenticatable
     protected $appends = [
         // 'profile_photo_url',
     ];
+
+
+
+    // Relationship
+    public function role()
+    {
+        return $this->hasOne(Role::class);
+    }
+
+    public function subscribed()
+    {
+        return $this->hasOne(Subscribed::class);
+    }
+
+
+
 }

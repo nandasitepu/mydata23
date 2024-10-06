@@ -42,16 +42,21 @@ class PostingController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required',
+            'pembuka' => 'required',
             'isi' => 'required',
-            'image' => 'required',
-            'kategori' => 'required',
-            'penulis' => 'required',
+            'gambar' => 'required',
+            // masalah
+            'kategori' => '',
+            // ok
+            'penulis' => '',
+            // masalah
+            'created_at' => '',
         ]);
 
-        $post = Posting::create($request->all());
+        Posting::create($request->all());
 
 
-        return redirect()->route('post.index')
+        return redirect()->route('posting.index')
                         ->with('success','Posting created successfully');
     }
 
@@ -65,7 +70,7 @@ class PostingController extends Controller
     {
         $post = Posting::find($id);
         return view('posting.show',compact('post'));
-        // return view ('posting.show');
+
     }
 
     /**
@@ -76,7 +81,9 @@ class PostingController extends Controller
      */
     public function edit($id)
     {
-        return view ('posting.edit');
+        $post = Posting::find($id);
+        return view('posting.edit')->with('post', $post);
+
     }
 
     /**
@@ -88,7 +95,23 @@ class PostingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'judul' => 'required',
+            'pembuka' => 'required',
+            'isi' => 'required',
+            'gambar' => 'required',
+            // masalah
+            'kategori' => '',
+            // ok
+            'penulis' => '',
+            // masalah
+            'created_at' => '',
+        ]);
+
+        Posting::find($id)->update($request->all());
+
+        return redirect()->route('posting.index')
+                        ->with('success','Posting created successfully');
     }
 
     /**

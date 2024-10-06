@@ -10,7 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArtikelController;
 
 //
-use App\Http\Controllers\Hukum\PeraturanHukumController;
+use App\Http\Controllers\Hukum\PeraturanController;
 use App\Http\Controllers\Posting\PostingController;
 /*
 |--------------------------------------------------------------------------
@@ -24,33 +24,108 @@ use App\Http\Controllers\Posting\PostingController;
 */
 
 // Main Pages
-Route::view('/', 'welcome')->name('welcome');
-Route::view('/test', 'test')->name('test');
+Route::view('/', 'main')->name('main');
 //
-Route::view('/hukum', 'pages.hukum.hukum')->name('hukum');
-Route::view('/pendidikan', 'pages.pendidikan.pendidikan')->name('pendidikan');
-Route::view('/kesehatan', 'pages.kesehatan.kesehatan')->name('kesehatan');
-Route::view('/bisnis', 'pages.bisnis.bisnis')->name('bisnis');
-Route::view('/data+', 'pages.data+.data+')->name('data+');
-//
+
+
+// Singles
 Route::view('/sdank', 'pages._single.s-dan-k')->name('s_dan_k');
 Route::view('/faq', 'pages._single.faq')->name('faq');
 Route::view('/disclaimer', 'pages._single.disclaimer')->name('disclaimer');
-//
 Route::view('/permintaan-data', 'pages._single.permintaan')->name('permintaan');
 Route::view('/statistik-kami', 'pages._single.statistik-kami')->name('statistik');
 Route::view('/tentang-kami', 'pages._single.tentang-kami')->name('tentang-kami');
 Route::view('/komentar-kritik-saran', 'pages._single.komentar-kritik-saran')->name('komentar-kritik-saran');
 
+// Non AuthPages
+Route::view('/pendidikan', 'pages.pendidikan.index')->name('pendidikan');
+Route::view('/kesehatan', 'pages.kesehatan.kesehatan')->name('kesehatan');
+Route::view('/bisnis', 'pages.bisnis.bisnis')->name('bisnis');
+Route::view('/pemerintahan', 'pages.pemerintahan.pemerintahan')->name('pemerintahan');
+Route::view('/data+', 'pages.data+.data+')->name('data+');
+
+
+
+
+
+
+
+
+
+
+
+
+// Dashboard Admin Area
+Route::prefix('dashboard')->middleware('admin:99')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    // Hukum
+    Route::prefix('hukum')->group(function () {
+        Route::get('/', [DashboardController::class, 'hukum'])->name('dashboard.hukum');
+        Route::get('peraturan', [DashboardController::class, 'peraturan'])->name('dashboard.peraturan');
+    });
+    Route::get('pendidikan', [DashboardController::class, 'pendidikan'])->name('dashboard.pendidikan');
+    Route::get('kesehatan', [DashboardController::class, 'kesehatan'])->name('dashboard.kesehatan');
+});
+
+// User Area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Resources
+// Posting
+Route::prefix('blog')->group(function () {
+    Route::resource('posting', PostingController::class)->only(['index', 'show']);
+    // Posting
+    Route::resource('posting', PostingController::class)->only(['create', 'edit', 'store', 'update', 'destroy'])->middleware('auth');;
+});
+
+// Hukum
+Route::prefix('hukum')->group(function () {
+    // Main Page
+    Route::view('/', 'pages.hukum.index')->name('hukum');
+    // Lembaga Penegak Hukum
+    Route::view('lembaga', 'pages.hukum.lembaga.index')->name('lembaga-hukum');
+    // Peraturan
+    Route::resource('peraturan', PeraturanController::class)->only(['index', 'show']);;
+    Route::resource('peraturan', PeraturanController::class)->only(['create', 'edit', 'store', 'update', 'destroy'])->middleware('auth');
+    // Praktisi Hukum
+    Route::view('praktisi', 'pages.hukum.praktisi.index')->name('praktisi-hukum');
+
+});
+
 
 // Auth Page
 Route::middleware('auth', 'verified')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     // Profile
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 });
 
 
@@ -61,32 +136,19 @@ Route::controller(SocialiteController::class)
         Route::post('logout, logout')->middleware('auth')->name('logout');
     });
 
-Route::resource('artikel', ArtikelController::class);
-
-Route::resource('posting', PostingController::class);
 
 
 
-// // Untuk redirect ke Google
-// Route::get('login/google/redirect', [SocialiteController::class, 'redirect'])
-//     ->middleware(['guest'])
-//     ->name('redirect');
 
-// // Untuk callback dari Google
-// Route::get('login/google/callback', [SocialiteController::class, 'callback'])
-//     ->middleware(['guest'])
-//     ->name('callback');
 
-// // Untuk logout
-// Route::post('logout', [SocialiteController::class, 'logout'])
-//     ->middleware(['auth'])
-//     ->name('logout');
+
+
 
 
 
 // Non Auth
 // Route::resource('hukum', UserController::class);
-Route::resource('hukum/peraturan', PeraturanHukumController::class);
+
 // Route::resource('pendidikan', UserController::class);
 // Route::resource('kesehatan', UserController::class);
 // Route::resource('bisnis', UserController::class);

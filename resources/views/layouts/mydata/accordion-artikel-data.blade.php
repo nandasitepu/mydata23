@@ -4,7 +4,7 @@
       <div x-data="{ expanded: true }" class="py-1">
 
           <button id="postingan" type="button"
-              class="flex justify-around items-center text-center font-semibold py-2 px-5" @click="expanded = !expanded"
+              class="flex justify-center items-center text-center font-semibold py-2 px-5" @click="expanded = !expanded"
               :aria-expanded="expanded" aria-controls="faqs-text-02">
               <div class="grid grid-cols-5 lg:grid-cols-12 text-sm">
 

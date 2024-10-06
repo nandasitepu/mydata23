@@ -1,5 +1,5 @@
 <div
-    class="grid sm:grid-cols-1 md:grid-cols-12 gap-4 md:mt-0 bg-gradient-to-r from-green-200 to-blue-200 rounded-b-[400px] mx-2">
+    class="grid sm:grid-cols-1 p-1 md:grid-cols-12 gap-4 md:mt-0 bg-gradient-to-r from-green-200 to-blue-200 rounded-t-[400px] mx-2 z-40">
     {{-- Top Menu  --}}
     <div class="md:col-span-12 xl:col-span-6">
         @include('layouts.mydata.top-menu2')

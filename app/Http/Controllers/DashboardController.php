@@ -5,16 +5,23 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 //
-use App\Models\Hukum\PeraturanHukum;
+use App\Models\Hukum\Peraturan;
 use DataTables;
 
 class DashboardController extends Controller
 {
 
-    public function dashboard (Request $request)
+    public function index (Request $request)
+    {
+
+        return view('dashboard.index');
+
+    }
+
+    public function hukum (Request $request)
     {
         if ($request->ajax()) {
-            $data = PeraturanHukum::all();
+            $data = Peraturan::all();
             return Datatables::of($data)
                     ->addIndexColumn()
                     // ->editColumn('jenis', function ($data) {
@@ -33,9 +40,21 @@ class DashboardController extends Controller
                     ->make(true);
         }
 
-        return view('dashboard');
+        return view ('dashboard.pages.hukum');
+    }
 
-        // $data = PeraturanModel::all();
-        // echo $data;
+    public function pendidikan ()
+    {
+        return view ('dashboard.pages.pendidikan');
+    }
+
+    public function kesehatan ()
+    {
+        return view ('dashboard.pages.kesehatan');
+    }
+
+    public function peraturan ()
+    {
+        return view ('dashboard.pages.peraturan');
     }
 }

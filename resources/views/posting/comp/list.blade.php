@@ -1,6 +1,8 @@
 <div class="grid lg:grid-cols-5 gap-2 m-5">
-    @foreach (App\Models\Blog\Posting::all() as $post)
-        <article class="p-5 shadow-lg shadow-black rounded-xl bg-white">
+    @foreach (App\Models\Blog\Posting::paginate(10) as $post)
+        <article class="p-5 shadow-lg shadow-black rounded-xl bg-white grid grid-row-4">
+
+            {{-- Time --}}
             <div class="flex justify-between items-center mb-5 text-gray-500">
                 <span
                     class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
@@ -12,32 +14,40 @@
                     </svg>
                     {{ $post->kategori }}
                 </span>
-                <span class="text-sm">  @if ($post->created_at->isToday())
-                    Hari ini
-                @elseif($post->created_at->isYesterday())
-                    Kemarin
-                @else
-                    {{ $post->created_at->diffForHumans() }}
-                @endif</span>
+                <span class="text-sm">
+                    @if ($post->created_at->isToday())
+                        Hari ini
+                    @elseif($post->created_at->isYesterday())
+                        Kemarin
+                    @else
+                        {{ $post->created_at->diffForHumans() }}
+                    @endif
+                </span>
             </div>
-            <h2 class="mb-2 text-lg font-bold tracking-tight  dark:text-white prose-h1 text-blue-600">
-                <a href="{{route('posting.show', $post->id)}}">
-                    {{$post->judul}}
+
+            {{-- Title --}}
+            <div class="text-blue-600 text-justify text-lg font-bebas ">
+                <a href="{{ route('posting.show', $post->id) }}">
+                    <div> {{ $post->judul }}</div>
                 </a>
-            </h2>
-            <p class="mb-5 font-light text-gray-500 dark:text-gray-400 prose-md text-justify">
-                {{ Str::limit($post->isi, 200) }}
-            </p>
-            <div class="flex justify-between items-center">
+            </div>
+            {{-- Image --}}
+            <div class="flex justify-center">
+                <img src="{{ $post->gambar }}" class="object-fill h-48 w-96" alt="">
+            </div>
+            {{-- Opening --}}
+            <div class="prose-md text-gray-500 text-justify">
+                {!! Str::limit($post->pembuka, 200, '...') !!}
+            </div>
+            {{-- Writer --}}
+            <div class="flex justify-between items-center shadow-xl p-3 rounded-xl">
                 <div class="flex items-center space-x-4">
-                    <img class="w-7 h-7 rounded-full"
-                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-                        alt="Bonnie Green avatar" />
+                    <img class="w-7 h-7 rounded-full" src="{{ asset('img/pp_nobg.png') }}" alt="Bonnie Green avatar" />
                     <span class="font-medium dark:text-white">
-                        {{$post->penulis}}
+                        {{ $post->penulis }}
                     </span>
                 </div>
-                <a href="{{route('posting.show', $post->id)}}"
+                <a href="{{ route('posting.show', $post->id) }}"
                     class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
                     Baca
                     <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
@@ -50,5 +60,4 @@
             </div>
         </article>
     @endforeach
-
 </div>

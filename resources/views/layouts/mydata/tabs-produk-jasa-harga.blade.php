@@ -32,8 +32,7 @@
 
 <div id="default-styled-tab-content">
     {{-- Subscribed --}}
-    <div class="hidden p-4 rounded-xl" id="styled-newsletter" role="tabpanel"
-        aria-labelledby="newsletter">
+    <div class="hidden p-4 rounded-xl" id="styled-newsletter" role="tabpanel" aria-labelledby="newsletter">
 
         <a href="#_" class="relative px-5 py-2 font-medium text-white group">
             <span
@@ -46,8 +45,18 @@
                 class="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-blue-400 -rotate-12"></span>
             <span class="relative">Follow Media Social Kami</span>
         </a>
-        <div class="flex justify-end gap-x-1 h-12">
-            <img src="{{ asset('img/social-media/twitter.png') }}" class="p-2 shadow-sm" alt="">
+        <div class="flex justify-end gap-x-1 h-14">
+            <div class="w-14 h-14 p-2">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                    class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                    <g>
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            {{-- <img src="{{ asset('img/social-media/twitter.png') }}" class="p-2 shadow-sm" alt=""> --}}
             <img src="{{ asset('img/social-media/instagram.png') }}" class="p-2 shadow-sm" alt="">
             <img src="{{ asset('img/social-media/youtube.png') }}" class="p-2  shadow-sm" alt="">
             <img src="{{ asset('img/social-media/linkedin.png') }}" class="p-2 shadow-sm" alt="">
@@ -57,8 +66,7 @@
         @include('layouts.mydata.newsletter')
     </div>
     {{-- Produk --}}
-    <div class="hidden p-4 rounded-xl" id="styled-produk" role="tabpanel"
-        aria-labelledby="produk">
+    <div class="hidden p-4 rounded-xl" id="styled-produk" role="tabpanel" aria-labelledby="produk">
         <p>
             Produk Kami :
         <ul class="list-disc m-5">
@@ -70,8 +78,7 @@
         </p>
     </div>
     {{-- Jasa --}}
-    <div class="hidden p-4 rounded-xl" id="styled-jasa" role="tabpanel"
-        aria-labelledby="jasa">
+    <div class="hidden p-4 rounded-xl" id="styled-jasa" role="tabpanel" aria-labelledby="jasa">
         <p>
             Jasa Kami :
         <ul class="list-disc m-5">
@@ -83,8 +90,7 @@
         </p>
     </div>
     {{-- Harga --}}
-    <div class="hidden p-4 rounded-xl" id="styled-harga" role="tabpanel"
-        aria-labelledby="harga">
+    <div class="hidden p-4 rounded-xl" id="styled-harga" role="tabpanel" aria-labelledby="harga">
         <div class="grid grid-cols-12 gap-1">
             <div class="col-span-6">
                 <div class="border border-black p-5 bg-green-400 text-white font-bold">
@@ -96,10 +102,12 @@
                                 </p>
                                 <p class="text-sm">Daftar / Lihat / Cobain</p>
                                 <div class="my-5 p-2 text-center font-bold animate-pulse">
-                                    <a href="#_" class="  border-white rounded px-5 py-2.5 overflow-hidden group bg-green-400 relative hover:bg-gradient-to-r hover:from-green-300 hover:to-green-200 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
-                                        <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                                    <a href="#_"
+                                        class="  border-white rounded px-5 py-2.5 overflow-hidden group bg-green-400 relative hover:bg-gradient-to-r hover:from-green-300 hover:to-green-200 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
+                                        <span
+                                            class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                                         <span class="relative">GRATIS</span>
-                                        </a>
+                                    </a>
                                 </div>
 
                             </div>

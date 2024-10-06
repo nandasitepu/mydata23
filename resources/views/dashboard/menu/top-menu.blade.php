@@ -1,18 +1,16 @@
 {{-- Top Navigation --}}
-<nav
-    class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 " id="logo-bar">
-    <div class="block md:hidden border-2 p-2 border-black">
-        <a href="/" class="flex justify-center" >
-            <img class="h-16 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
-            <span class="text-4xl p-2 font-bebas font-bold"> DATA.ID</span>
+<nav class="px-4 py-2.5 fixed left-0 right-0 top-0 md:ml-64 bg-white" id="logo-bar">
+    <div class="block md:hidden p-2">
+        <a href="/" class="flex justify-center">
+            <img class="h-12 p-1 bg-red-300" src="{{ asset('/img/logo/MY.png') }}">
+            <span class="text-4xl p-2 font-bebas"> DATA.ID</span>
         </a>
     </div>
-    <div class="flex flex-wrap justify-between items-center bg-gray-100 border-2 border-gray-500 shadow-md px-5">
+    <div class="flex flex-wrap justify-between items-center bg-gray-100 shadow-md px-5" >
         {{-- Left Menu --}}
         <div class="flex justify-start items-center">
-            <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
-                aria-controls="drawer-navigation"
-                class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+            <button class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden"
+                data-dropdown-toggle="navbar-default" type="button">
                 <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
@@ -23,6 +21,179 @@
                 <span class="sr-only">Toggle sidebar</span>
             </button>
 
+            <!-- Sidebar -->
+            <aside id="navbar-default" class="hidden fixed top-0 left-0 z-40 w-64 h-screen" aria-label="sidenav">
+                <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800 z-100">
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                                <img class="rounded-lg w-10" src="{{ asset('/img/data-plus/dashboard.png') }}"
+                                    alt="mydata_dashboard">
+                                <span class="ml-3">Overview</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+                                <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/hukum.png') }}"
+                                    alt="mydata_hukum">
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap">Hukum</span>
+                                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="dropdown-pages" class="hidden py-2 space-y-2">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Peraturan</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Instansi</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Jasa</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                aria-controls="dropdown-sales" data-collapse-toggle="dropdown-sales">
+                                <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/pendidikan.png') }}"
+                                    alt="mydata_pendidikan">
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap">Pendidikan</span>
+                                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="dropdown-sales" class="hidden py-2 space-y-2">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Sekolah</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Pelatihan</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Jasa</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                aria-controls="dropdown-kesehatan" data-collapse-toggle="dropdown-kesehatan">
+                                <img class="rounded-lg w-10" src="{{ asset('/img/menu/icons/kesehatan.png') }}"
+                                    alt="mydata_kesehatan">
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap">Kesehatan</span>
+                                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="dropdown-kesehatan" class="hidden py-2 space-y-2">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Faskes</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Obat</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Jasa
+                                        Kesehatan</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
+                                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                aria-controls="dropdown-authentication"
+                                data-collapse-toggle="dropdown-authentication">
+                                <img class="rounded-lg w-10" src="{{ asset('/img/data-plus/data-plus.png') }}"
+                                    alt="mydata_data-plus">
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap">Data +</span>
+                                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <ul id="dropdown-authentication" class="hidden py-2 space-y-2">
+
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Privat</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Publik</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700">
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                <svg aria-hidden="true"
+                                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                    <path fill-rule="evenodd"
+                                        d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="ml-3">Docs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                <svg aria-hidden="true"
+                                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
+                                    </path>
+                                </svg>
+                                <span class="ml-3">Components</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
+                                <svg aria-hidden="true"
+                                    class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="ml-3">Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
             <div class="hidden md:block">
                 <a href="/" class="flex items-center justify-between mr-4">
                     <img class="h-14 my-2 border-2 border-red-300" src="{{ asset('/img/logo/MY.png') }}">
@@ -31,8 +202,9 @@
             </div>
 
         </div>
+
         {{-- Right Menu --}}
-        <div class="flex items-center">
+        <div class="flex justify-end items-center">
             <!-- Notifications Button-->
             <button type="button" data-dropdown-toggle="notification-dropdown"
                 class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
@@ -221,13 +393,13 @@
                 </svg>
             </button>
             <!-- Apps Dropdown menu -->
-            <div class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+            <div class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
                 id="apps-dropdown">
                 <div
                     class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
                     Apps
                 </div>
-                <div class="grid grid-cols-3 gap-4 p-4">
+                <div class="grid grid-cols-3 gap-4 p-4 bg-white">
                     <a href="#"
                         class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
                         <svg aria-hidden="true"
@@ -358,8 +530,10 @@
             <div class="hidden z-50 my-4 w-56 text-base list-none bg-white  divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
                 id="dropdown">
                 <div class="py-3 px-4">
-                    <span class="block text-sm font-semibold text-gray-900 dark:text-white">Neil Sims</span>
-                    <span class="block text-sm text-gray-900 truncate dark:text-white">name@flowbite.com</span>
+                    <span class="block text-sm font-semibold text-gray-900 dark:text-white"> {{ App\Models\User::find(1)->name }}</span>
+                    <span class="block text-sm text-gray-900 truncate dark:text-white">
+                        {{ App\Models\User::find(1)->email }}
+                    </span>
                 </div>
                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                     <li>
@@ -423,11 +597,11 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-responsive-nav-link :href="route('logout')"
+                            <x-nav.responsive-nav-link :href="route('logout')"
                                 onclick="event.preventDefault();
                                     this.closest('form').submit();">
                                 {{ __('Log Out') }}
-                            </x-responsive-nav-link>
+                            </x-nav.responsive-nav-link>
                         </form>
                     </li>
                 </ul>
@@ -443,7 +617,7 @@
     window.addEventListener('scroll', function() {
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop) {
-            navbar.style.top = '-90px';
+            navbar.style.top = '-65px';
         } else {
             navbar.style.top = '0';
         }

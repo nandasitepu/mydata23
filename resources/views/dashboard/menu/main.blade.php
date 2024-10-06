@@ -1,6 +1,5 @@
 {{-- Main Dashboard --}}
 
-<main class="p-4 md:ml-64 h-auto pt-40 mt-16 md:mt-5">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <div class="border-2 border-dashed border-gray-300 rounded-lg bg-gray-100 dark:border-gray-600 p-5">
             <p class="text-3xl font-bebas">Hukum</p>
@@ -82,7 +81,7 @@
                 </p>
                 <span class="fa-stack fa-1x">
                     <i class="fa-solid fa-camera fa-stack-1x"></i>
-                    <i class="fa-solid fa-ban fa-stack-2x" style="color:Tomato"></i>
+                    <i class="fa-solid fa-ban fa-stack-1x" style="color:Tomato"></i>
                 </span>
             </div>
 
@@ -111,13 +110,12 @@
     </div>
 
     <hr>
-
-    @include('components.charts.sample')
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        @include('components.charts.sample')
+    </div>
     <hr>
+    <div class=" mb-4">
+        @include('components.tables.sample')
+    </div>
 
-    @include('components.tables.sample')
-
-
-
-</main>
 

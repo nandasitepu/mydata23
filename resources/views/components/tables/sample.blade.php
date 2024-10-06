@@ -1,166 +1,369 @@
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm ">
-    {{-- <div class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4">
-        <div>
-            <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio"
-                class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-                type="button">
-                <svg class="w-3 h-3 text-gray-500 dark:text-gray-400 me-3" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                        d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z" />
-                </svg>
-                Last 30 days
-                <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 1 4 4 4-4" />
-                </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div id="dropdownRadio"
-                class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-                data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top"
-                style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(522.5px, 3847.5px, 0px);">
-                <ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownRadioButton">
-                    <li>
-                        <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="filter-radio-example-1" type="radio" value="" name="filter-radio"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="filter-radio-example-1"
-                                class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Last
-                                day</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input checked="" id="filter-radio-example-2" type="radio" value=""
-                                name="filter-radio"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="filter-radio-example-2"
-                                class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Last
-                                7 days</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="filter-radio-example-3" type="radio" value="" name="filter-radio"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="filter-radio-example-3"
-                                class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Last
-                                30 days</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="filter-radio-example-4" type="radio" value="" name="filter-radio"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="filter-radio-example-4"
-                                class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Last
-                                month</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="filter-radio-example-5" type="radio" value="" name="filter-radio"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="filter-radio-example-5"
-                                class="w-full ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Last
-                                year</label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <label for="table-search" class="sr-only">Search</label>
-        <div class="relative">
-            <div
-                class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
-                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor"
-                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </div>
-            <input type="text" id="table-search"
-                class="block p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search for items">
-        </div>
-    </div> --}}
-    <table class="data-peraturan table-auto w-full border-2 border-gray-300">
-        <thead class=" px-4 py-2 border-2 border-gray-300  my-4">
-            <tr class="my-4">
-                <th scope="col" class="px-6 py-3">
-                    ID
-                </th>
+<table id="filter-table">
+    <thead>
+        <tr>
+            <th>
+                <span class="flex items-center">
+                    Name
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Category
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Brand
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Price
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Stock
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Total Sales
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+            <th>
+                <span class="flex items-center">
+                    Status
+                    <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                    </svg>
+                </span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple iMac</td>
+            <td>Computers</td>
+            <td>Apple</td>
+            <td>$1,299</td>
+            <td>50</td>
+            <td>200</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple iPhone</td>
+            <td>Mobile Phones</td>
+            <td>Apple</td>
+            <td>$999</td>
+            <td>120</td>
+            <td>300</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung Galaxy</td>
+            <td>Mobile Phones</td>
+            <td>Samsung</td>
+            <td>$899</td>
+            <td>80</td>
+            <td>150</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Dell XPS 13</td>
+            <td>Computers</td>
+            <td>Dell</td>
+            <td>$1,099</td>
+            <td>30</td>
+            <td>120</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">HP Spectre x360</td>
+            <td>Computers</td>
+            <td>HP</td>
+            <td>$1,299</td>
+            <td>25</td>
+            <td>80</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Google Pixel 6</td>
+            <td>Mobile Phones</td>
+            <td>Google</td>
+            <td>$799</td>
+            <td>100</td>
+            <td>200</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Sony WH-1000XM4</td>
+            <td>Headphones</td>
+            <td>Sony</td>
+            <td>$349</td>
+            <td>60</td>
+            <td>150</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple AirPods Pro</td>
+            <td>Headphones</td>
+            <td>Apple</td>
+            <td>$249</td>
+            <td>200</td>
+            <td>300</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Asus ROG Zephyrus</td>
+            <td>Computers</td>
+            <td>Asus</td>
+            <td>$1,899</td>
+            <td>15</td>
+            <td>50</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Microsoft Surface Pro 7</td>
+            <td>Computers</td>
+            <td>Microsoft</td>
+            <td>$899</td>
+            <td>40</td>
+            <td>100</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung QLED TV</td>
+            <td>Televisions</td>
+            <td>Samsung</td>
+            <td>$1,299</td>
+            <td>25</td>
+            <td>70</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">LG OLED TV</td>
+            <td>Televisions</td>
+            <td>LG</td>
+            <td>$1,499</td>
+            <td>20</td>
+            <td>50</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Canon EOS R5</td>
+            <td>Cameras</td>
+            <td>Canon</td>
+            <td>$3,899</td>
+            <td>10</td>
+            <td>30</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nikon Z7 II</td>
+            <td>Cameras</td>
+            <td>Nikon</td>
+            <td>$3,299</td>
+            <td>8</td>
+            <td>25</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple Watch Series 7</td>
+            <td>Wearables</td>
+            <td>Apple</td>
+            <td>$399</td>
+            <td>150</td>
+            <td>500</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Fitbit Charge 5</td>
+            <td>Wearables</td>
+            <td>Fitbit</td>
+            <td>$179</td>
+            <td>100</td>
+            <td>250</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Dyson V11 Vacuum</td>
+            <td>Home Appliances</td>
+            <td>Dyson</td>
+            <td>$599</td>
+            <td>30</td>
+            <td>90</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">iRobot Roomba i7+</td>
+            <td>Home Appliances</td>
+            <td>iRobot</td>
+            <td>$799</td>
+            <td>20</td>
+            <td>70</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bose SoundLink Revolve</td>
+            <td>Speakers</td>
+            <td>Bose</td>
+            <td>$199</td>
+            <td>80</td>
+            <td>200</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Sonos One</td>
+            <td>Speakers</td>
+            <td>Sonos</td>
+            <td>$219</td>
+            <td>60</td>
+            <td>180</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple iPad Pro</td>
+            <td>Tablets</td>
+            <td>Apple</td>
+            <td>$1,099</td>
+            <td>50</td>
+            <td>150</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Samsung Galaxy Tab S7</td>
+            <td>Tablets</td>
+            <td>Samsung</td>
+            <td>$649</td>
+            <td>70</td>
+            <td>130</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Amazon Echo Dot</td>
+            <td>Smart Home</td>
+            <td>Amazon</td>
+            <td>$49</td>
+            <td>300</td>
+            <td>800</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Google Nest Hub</td>
+            <td>Smart Home</td>
+            <td>Google</td>
+            <td>$89</td>
+            <td>150</td>
+            <td>400</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">PlayStation 5</td>
+            <td>Gaming Consoles</td>
+            <td>Sony</td>
+            <td>$499</td>
+            <td>10</td>
+            <td>500</td>
+            <td>Out of Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Xbox Series X</td>
+            <td>Gaming Consoles</td>
+            <td>Microsoft</td>
+            <td>$499</td>
+            <td>15</td>
+            <td>450</td>
+            <td>Out of Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nintendo Switch</td>
+            <td>Gaming Consoles</td>
+            <td>Nintendo</td>
+            <td>$299</td>
+            <td>40</td>
+            <td>600</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Apple MacBook Pro</td>
+            <td>Computers</td>
+            <td>Apple</td>
+            <td>$1,299</td>
+            <td>20</td>
+            <td>100</td>
+            <td>In Stock</td>
+        </tr>
+    </tbody>
+</table>
 
-                <th scope="col" class="px-6 py-3">
-                    Jenis
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Nomor
-                </th>
-                <th width="col flex-auto">
-                    Action
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            {{-- Data --}}
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-
-<script type="text/javascript">
-    $(function() {
-        var table = $('.data-peraturan').DataTable({
-            columnDefs: [{
-                "className": "dt-center",
-                "targets": "_all"
-            }],
-            search: {
-                boundary: false
-            },
-            layout: {
-
-                topStart: 'search',
-
-                topEnd: null,
-
-
-                bottomStart: 'info',
-                bottomEnd: 'paging',
-            },
-            processing: true,
-            serverSide: true,
-            ajax: "{{ route('dashboard') }}",
-            columns: [{
-                    data: 'id',
-                    name: 'id'
-                },
-
-                {
-                    data: 'jenis',
-                    name: 'jenis'
-                },
-                {
-                    data: 'nomor',
-                    name: 'nomor'
-                },
-                {
-                    data: 'action',
-                    name: 'action',
-                    orderable: false,
-                    searchable: false
-                },
-            ]
-        });
-
-    });
-</script>
+@slot('scripts')
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
+    <script>
+        if (document.getElementById("filter-table") && typeof simpleDatatables.DataTable !== 'undefined') {
+            const dataTable = new simpleDatatables.DataTable("#filter-table", {
+                tableRender: (_data, table, type) => {
+                    if (type === "print") {
+                        return table
+                    }
+                    const tHead = table.childNodes[0]
+                    const filterHeaders = {
+                        nodeName: "TR",
+                        attributes: {
+                            class: "search-filtering-row"
+                        },
+                        childNodes: tHead.childNodes[0].childNodes.map(
+                            (_th, index) => ({
+                                nodeName: "TH",
+                                childNodes: [{
+                                    nodeName: "INPUT",
+                                    attributes: {
+                                        class: "datatable-input",
+                                        type: "search",
+                                        "data-columns": "[" + index + "]"
+                                    }
+                                }]
+                            })
+                        )
+                    }
+                    tHead.childNodes.push(filterHeaders)
+                    return table
+                }
+            });
+        }
+    </script>
+@endslot

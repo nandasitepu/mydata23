@@ -1,183 +1,13 @@
 <x-main-layout>
-    <div class="grid sm:grid-cols-12 mx-5 bg-gradient-to-r from-green-50 to-blue-50 rounded-r-full">
-        <div class="sm:col-span-2">
-            <!-- Side Menu -->
-            <div>
-                <div class="p-3">
-                    <label for="input-group-search" class="sr-only">Search</label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                            </svg>
-                        </div>
-                        <input type="text" id="input-group-search"
-                            class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Cari Apa ?">
-                    </div>
-                </div>
-                <ul class="max-h-96 overflow-auto px-3 pb-3 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownSearchButton">
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-11" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-11"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Data</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input checked id="checkbox-item-12" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-12"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Infografis</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-13" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-13"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Tabel</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-14" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-14"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Gambar</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-15" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-15"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Tulisan</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-16" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-16"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Opini</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-17" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-17"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Cerita</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-17" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-17"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Fiksi</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-17" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-17"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Artikel</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flex items-center ps-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <input id="checkbox-item-17" type="checkbox" value=""
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                            <label for="checkbox-item-17"
-                                class="w-full py-2 ms-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Iklan</label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            {{-- claude SideMenu --}}
-            <div class="bg-white rounded-lg p-4 w-full max-w-xs mx-auto md:max-w-sm lg:max-w-md">
-                <nav class="mb-6">
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#"
-                                class="flex items-center space-x-3 text-gray-700 p-2 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out">
-                                <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
-                                    </path>
-                                </svg>
-                                <span class="flex-1">Home</span>
-                            </a>
-                        </li>
-                        <!-- Repeat this structure for other menu items -->
-                        <!-- For brevity, I'm only including a few items here -->
-                        <li>
-                            <a href="#"
-                                class="flex items-center space-x-3 text-gray-700 p-2 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out">
-                                <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
-                                    </path>
-                                </svg>
-                                <span class="flex-1">Reading list</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center space-x-3 text-gray-700 p-2 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out">
-                                <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
-                                    </path>
-                                </svg>
-                                <span class="flex-1">Podcasts</span>
-                            </a>
-                        </li>
-                        <!-- Add more menu items here -->
-                    </ul>
-                </nav>
-
-                <div class="border-t pt-4">
-                    <h3 class="text-gray-600 text-sm font-semibold mb-2">Others</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="#"
-                                class="flex items-center space-x-3 text-gray-700 p-2 rounded-md hover:bg-gray-100 transition duration-150 ease-in-out">
-                                <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
-                                    </path>
-                                </svg>
-                                <span class="flex-1">Privacy policy</span>
-                            </a>
-                        </li>
-                        <!-- Add more "Others" items here -->
-                    </ul>
-                </div>
-            </div>
-
-
+    <div class="grid grid-cols-1 xl:grid-cols-12 bg-gradient-to-r from-green-50 to-blue-50 rounded-r-full">
+        <div class="col xl:col-span-3">
 
         </div>
-        <div class="sm:col-span-9">
+        <div class="col xl:col-span-6 shadow-xl">
             {{-- Blog --}}
-
-            <div class="p-10 shadow-md">
+            <div class="p-10">
                 {{-- Title --}}
-                <div class="py-5">
+                <div class="p-5 my-5 bg-white rounded-3xl">
                     <p class="text-5xl font-bebas text-center"> {{ $post->judul }}
                     </p>
                     <div class="text-center">
@@ -187,13 +17,13 @@
                                 alt="Extra large avatar">
                         </div>
                         <div class="items-center">
-                            <p>Penulis :  {{ $post->penulis }}</p>
+                            <p>Penulis : {{ $post->penulis }}</p>
                         </div>
-                        <p>Tanggal : {{ $post->created_at->format('d-m-y / h:m')  }}</p>
+                        <p>Tanggal : {{ $post->created_at->format('d-m-y') }}</p>
                         <p>Kategori : {{ $post->kategori }}</p>
                     </div>
                     <div class="flex justify-center">
-                        <p class="text-md italic text-center prose max-w-[1000px]"> Lorem ipsum, dolor sit amet
+                        <p class="text-md italic text-center prose-sm max-w-[1000px]"> Lorem ipsum, dolor sit amet
                             consectetur adipisicing elit. Nulla eos
                             recusandae accusantium, error quia quam tempora magni provident vel perspiciatis et
                             repudiandae
@@ -234,56 +64,70 @@
                     </button>
                 </div>
                 {{-- Main --}}
-                <div class="text-wrap leading-relaxed prose-lg max-w-none mt-5 text-justify">
-                    <img src="{{ $post->gambar }}" alt="">
-                    <p>{{ $post->isi }}</p>
+                <div class="mt-5">
+                    {{-- Gambar Utama --}}
+                    <div class="flex justify-center">
+                        <img class="object-contain xl:w-1/2" src="{{ $post->gambar }}" alt="">
+                    </div>
+                    {{-- Pembuka --}}
+                    <div class="prose md:prose-md italic font-bold max-w-none mt-5 text-center">
+                        {!! $post->pembuka !!}
+                    </div>
+                    <div class="bg-gray-200">
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
+                            crossorigin="anonymous"></script>
+                        <!-- mix88-728x90-text -->
+                        <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                            data-ad-client="ca-pub-5839875324586738" data-ad-slot="5574997902"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                    {{-- Isi --}}
+                    <div class="prose md:prose-lg max-w-none mt-5 text-justify">
+                        {!! $post->isi !!}
+                    </div>
 
                 </div>
             </div>
+            {{-- ADS --}}
+            <div class="bg-gray-200">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5839875324586738"
+                    crossorigin="anonymous"></script>
+                <!-- MYDATA.ID - ADS 01 -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5839875324586738"
+                    data-ad-slot="9885579323" data-ad-format="auto" data-full-width-responsive="true"
+                    data-adtest="on"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
             {{-- Newsletter --}}
-            <section class="bg-white dark:bg-gray-900 rounded-full">
-                <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-                    <div class="mx-auto max-w-screen-md sm:text-center">
-                        <h2
-                            class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-                            Sign up for our newsletter</h2>
-                        <p class="mx-auto mb-8 max-w-2xl  text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">Stay up
-                            to date with the roadmap progress, announcements and exclusive discounts feel free to sign
-                            up with your email.</p>
-                        <form action="#">
-                            <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-                                <div class="relative w-full">
-                                    <label for="email"
-                                        class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email
-                                        address</label>
-                                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                            viewBox="0 0 20 16">
-                                            <path
-                                                d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
-                                            <path
-                                                d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
-                                        </svg>
-                                    </div>
-                                    <input
-                                        class="block p-3 pl-9 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                        placeholder="Enter your email" type="email" id="email" required="">
-                                </div>
-                                <div>
-                                    <button type="submit"
-                                        class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Subscribe</button>
-                                </div>
-                            </div>
-                            <div
-                                class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
-                                We care about the protection of your data. <a href="#"
-                                    class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our
-                                    Privacy Policy</a>.</div>
-                        </form>
-                    </div>
+            <div class="p-4 rounded-xl" id="styled-newsletter" role="tabpanel" aria-labelledby="newsletter">
+
+                <a href="#_" class="relative px-5 py-2 font-medium text-white group">
+                    <span
+                        class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-blue-500 group-hover:bg-blue-700 group-hover:skew-x-12"></span>
+                    <span
+                        class="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-blue-700 group-hover:bg-blue-500 group-hover:-skew-x-12"></span>
+                    <span
+                        class="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-blue-600 -rotate-12"></span>
+                    <span
+                        class="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-blue-400 -rotate-12"></span>
+                    <span class="relative">Follow Media Social Kami</span>
+                </a>
+                <div class="flex justify-end gap-x-1 h-12">
+                    <img src="{{ asset('img/social-media/twitter.png') }}" class="p-2 shadow-sm" alt="">
+                    <img src="{{ asset('img/social-media/instagram.png') }}" class="p-2 shadow-sm" alt="">
+                    <img src="{{ asset('img/social-media/youtube.png') }}" class="p-2  shadow-sm" alt="">
+                    <img src="{{ asset('img/social-media/linkedin.png') }}" class="p-2 shadow-sm" alt="">
+                    <img src="{{ asset('img/social-media/facebook.png') }}" class="p-2 shadow-sm" alt="">
+                    <img src="{{ asset('img/social-media/whatsapp.png') }}" class="p-2 shadow-sm" alt="">
                 </div>
-            </section>
+
+            </div>
+            @include('layouts.mydata.newsletter')
             {{-- Discussion --}}
             <section class="not-format">
                 <div class="flex justify-between items-center mb-6">
@@ -535,7 +379,7 @@
             </section>
 
         </div>
-        <div class="sm:col-span-2">
+        <div class="col xl:col-span-3">
 
         </div>
     </div>

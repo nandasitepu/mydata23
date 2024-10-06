@@ -1,4 +1,4 @@
-<section class="bg-gray-100">
+<section class="bg-gray-100 rounded-xl">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md ">
             <p class="text-xl font-bold">Berlangganan  - <span class="font-normal text-md">News Letter</span> - <span class="text-green-500 font-bold text-sm">GRATIS</span></p>
